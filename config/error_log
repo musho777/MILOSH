@@ -1,0 +1,28 @@
+[14-Aug-2025 03:26:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/auth.php on line 17
+[14-Aug-2025 04:01:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/queue.php on line 16
+[16-Aug-2025 16:24:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/queue.php on line 16
+[17-Aug-2025 21:13:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/cache.php on line 18
+[18-Aug-2025 11:36:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/services.php on line 18
+[18-Aug-2025 21:30:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/filesystems.php on line 16
+[19-Aug-2025 21:18:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/karen1989/public_html/MILOSH/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/config/cache.php on line 18

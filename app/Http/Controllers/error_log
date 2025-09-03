@@ -1,0 +1,16 @@
+[13-Aug-2025 02:54:35 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/AdminController.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/AdminController.php on line 12
+[13-Aug-2025 02:55:39 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/HomeController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/HomeController.php on line 10
+[13-Aug-2025 02:56:48 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/ShopController.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/ShopController.php on line 7
+[13-Aug-2025 02:58:06 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/AuthController.php:8
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/app/Http/Controllers/AuthController.php on line 8

@@ -1,0 +1,4 @@
+[11-Aug-2025 15:14:20 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home2/karen1989/public_html/MILOSH/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/tests/Feature/ExampleTest.php on line 8

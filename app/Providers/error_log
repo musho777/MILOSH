@@ -1,0 +1,4 @@
+[18-Aug-2025 13:28:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home2/karen1989/public_html/MILOSH/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/app/Providers/AppServiceProvider.php on line 7

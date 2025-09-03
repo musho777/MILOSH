@@ -1,0 +1,8 @@
+[08-Aug-2025 15:53:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home2/karen1989/public_html/MILOSH/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/tests/TestCase.php on line 7
+[10-Aug-2025 17:11:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home2/karen1989/public_html/MILOSH/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/karen1989/public_html/MILOSH/tests/TestCase.php on line 7
