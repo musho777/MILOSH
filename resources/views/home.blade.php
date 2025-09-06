@@ -189,10 +189,9 @@
             </label>
         </div>
 
-        <div class="footer-links">
             <div>
                 <h4>СЕРВИС</h4>
-                <ul>
+                <ul  class = "contactDiv">
                     <li><a href="">Помощь</a></li>
                     <li><a href="">Доставка и вручение</a></li>
                     <li><a href="">Возврат и замена</a></li>
@@ -200,7 +199,7 @@
             </div>
             <div>
                 <h4>ЛИЧНЫЙ КАБИНЕТ</h4>
-                <ul>
+                <ul  class = "contactDiv">
                     <li><a href="">Мой профиль</a></li>
                     <li><a href="">Мои заказы</a></li>
                     <li><a href="">Избранное</a></li>
@@ -208,8 +207,8 @@
             </div>
             <div>
                 <h4>О КОМПАНИИ</h4>
-                <ul>
-                    <li>О Milosh</li>
+                <ul  class = "contactDiv">
+                    <li><a href="{{route('showJournalPage')}}">О Milosh</a></li>
                     <li><a href="{{route('showJournalPage')}}">Журнал</a></li>
                     <li><a href="{{route('showContactPage')}}">Реквизиты</a></li>
                     <li><a href="{{route('showCertifyPage')}}">Сертификаты</a></li>
@@ -218,16 +217,20 @@
             </div>
             <div>
                 <h4>КОНТАКТЫ</h4>
-                Телефон Call-Центра: +7 800 770 05 93<br><br>
-                Написать в WhatsApp<br>
-                Написать на почту<br><br>
-                Рабочие часы службы обработки заказов:<br>
-                ежедневно, 10:00 - 21:00 (время Московское),<br>
-                кроме выходных и праздничных дней.<br><br>
-                <strong>ОБРАТНЫЙ ЗВОНОК</strong>
+                <div  class = "contactDiv">
+                    <p>Телефон Call-Центра: +7 800 770 05 93</p>
+                    <p>Написать в WhatsApp</p>
+                    <p>Написать на почту</p>
+                    <p>Рабочие часы службы обработки заказов:</p>
+                    <p>ежедневно, 10:00 - 21:00 (время Московское),</p>
+                    <p>кроме выходных и праздничных дней.</p>
+                    <div>
+                        <div class = "line"></div>
+                        <p>ОБРАТНЫЙ ЗВОНОК</p>
+                    </div>
+                </div>
             </div>
 
-        </div>
     </div>
 
     <div class="footer-middle">
