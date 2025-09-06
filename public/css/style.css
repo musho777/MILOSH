@@ -139,7 +139,6 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
-    padding: 40px 0;
     display: flex;
     align-items: center;
     border: 5px solid black;
@@ -655,7 +654,7 @@ body {
 .footer-top {
     display: flex;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 30px 60px;
     justify-content: space-between;
 }
 
@@ -713,15 +712,56 @@ body {
 
 .footer-middle {
     width: 100%;
-    text-align: center;
-    background: #111;
-    padding: 30px 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.footer-middle img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.footer-middle .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+.footer-middle__logo {
+    width: 100%;
+    background-image: url("/assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    border: 5px solid black;
+}
+
+.footer-middle__logo .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-middle__text {
+    color: #ffffff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Comfortaa", cursive, sans-serif;
+    line-height: 1;
+    font-size: 60px; /* Default size for mobile */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0;
+}
+
+.footer-middle__text .footer-letter-img {
+    height: 1em;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    align-self: center;
 }
 
 .footer-bottom {
@@ -738,25 +778,6 @@ body {
     font-size: 16px;
     color: #f5d25e;
     cursor: pointer;
-}
-
-.footer-middle {
-    position: relative;
-    display: inline-block; /* или width: 100%; если нужно на всю ширину */
-}
-
-.footer-middle img:first-child {
-    display: block;
-    width: 100%; /* или нужная ширина */
-}
-
-.footer-middle .milosh_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none; /* если нужно, чтобы мышь проходила сквозь */
-    max-width: 80%; /* или нужный размер */
 }
 
 .image-wrapper {
@@ -864,6 +885,10 @@ body {
         max-width: 1920px;
         padding: 0 60px;
     }
+    .footer-middle__logo .container {
+        max-width: 1920px;
+        padding: 0 60px;
+    }
     .logo_img {
         width: 279.84px;
         height: 44.69px;
@@ -885,9 +910,17 @@ body {
         font-size: 240px;
         letter-spacing: 0;
     }
+    .footer-middle__text {
+        font-size: 240px;
+        letter-spacing: 0;
+    }
     .banner__text .letter-img {
         width: 305.6px;
         height: 227.9px;
+    }
+    .footer-middle__text .footer-letter-img {
+        width: 132px;
+        height: 98px;
     }
 }
 
@@ -903,6 +936,13 @@ body {
     .banner__logo .container {
         max-width: 1980px;
         padding: 0 60px;
+    }
+    .footer-middle__logo .container {
+        max-width: 1980px;
+        padding: 0 60px;
+    }
+    .footer-middle__logo {
+        height: 374px;
     }
     .logo_img {
         width: 279.84px;
@@ -928,9 +968,17 @@ body {
         font-size: 280px;
         letter-spacing: 0;
     }
+    .footer-middle__text {
+        font-size: 280px;
+        letter-spacing: 0;
+    }
     .banner__text .letter-img {
         width: 356.53px;
         height: 265.88px;
+    }
+    .footer-middle__text .footer-letter-img {
+        width: 154px;
+        height: 114px;
     }
 }
 
@@ -942,6 +990,9 @@ body {
         justify-content: space-between;
     }
     .banner__logo .container {
+        padding: 0 40px;
+    }
+    .footer-middle__logo .container {
         padding: 0 40px;
     }
     .logo_img {
@@ -959,6 +1010,10 @@ body {
         font-size: 180px;
         letter-spacing: 0;
     }
+    .footer-middle__text {
+        font-size: 180px;
+        letter-spacing: 0;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -968,6 +1023,9 @@ body {
         justify-content: space-between;
     }
     .banner__logo .container {
+        padding: 0 30px;
+    }
+    .footer-middle__logo .container {
         padding: 0 30px;
     }
     .logo_img {
@@ -985,6 +1043,10 @@ body {
         font-size: 140px;
         letter-spacing: 0;
     }
+    .footer-middle__text {
+        font-size: 140px;
+        letter-spacing: 0;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -994,6 +1056,9 @@ body {
         justify-content: space-between;
     }
     .banner__logo .container {
+        padding: 0 20px;
+    }
+    .footer-middle__logo .container {
         padding: 0 20px;
     }
     .logo_img {
@@ -1011,6 +1076,10 @@ body {
         font-size: 100px;
         letter-spacing: 0;
     }
+    .footer-middle__text {
+        font-size: 100px;
+        letter-spacing: 0;
+    }
 }
 
 @media (max-width: 870px) {
@@ -1025,6 +1094,9 @@ body {
         justify-content: space-between;
     }
     .banner__logo .container {
+        padding: 0 15px;
+    }
+    .footer-middle__logo .container {
         padding: 0 15px;
     }
     .nav {
@@ -1059,6 +1131,10 @@ body {
         font-size: 70px;
         letter-spacing: 0;
     }
+    .footer-middle__text {
+        font-size: 70px;
+        letter-spacing: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1068,6 +1144,9 @@ body {
         justify-content: space-between;
     }
     .banner__logo .container {
+        padding: 0 10px;
+    }
+    .footer-middle__logo .container {
         padding: 0 10px;
     }
     .logo_img {
@@ -1082,6 +1161,10 @@ body {
         height: 20px;
     }
     .banner__text {
+        font-size: 50px;
+        letter-spacing: 0;
+    }
+    .footer-middle__text {
         font-size: 50px;
         letter-spacing: 0;
     }

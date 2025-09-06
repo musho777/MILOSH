@@ -60,7 +60,7 @@
     <div class="banner__logo">
         <div class="container">
             <div class="banner__text">
-                <img src="{{ asset('assets/images/M.png') }}" alt="M" class="letter-img letter-m">
+         <img src="{{ asset('assets/images/M.png') }}" alt="M" class="letter-img letter-m">
                 <img src="{{ asset('assets/images/I.png') }}" alt="I" class="letter-img letter-i">
                 <img src="{{ asset('assets/images/L.png') }}" alt="L" class="letter-img letter-l">
                 <img src="{{ asset('assets/images/O.png') }}" alt="O" class="letter-img letter-o">
@@ -234,9 +234,18 @@
     </div>
 
     <div class="footer-middle">
-        <img src="{{ asset('images/banners/Rectangle 9.jpg') }}" alt="M I L O S H">
-        <img class="milosh_text" src="{{ asset('images/banners/милош.png') }}" alt="M I L O S H">
-
+        <div class="footer-middle__logo">
+            <div class="container">
+                <div class="footer-middle__text">
+                    <img src="{{ asset('assets/images/BannerM.png') }}" alt="M" class="footer-letter-img letter-m">
+                    <img src="{{ asset('assets/images/BannerI.png') }}" alt="I" class="footer-letter-img letter-i">
+                    <img src="{{ asset('assets/images/BannerL.png') }}" alt="L" class="footer-letter-img letter-l">
+                    <img src="{{ asset('assets/images/BannerO.png') }}" alt="O" class="footer-letter-img letter-o">
+                    <img src="{{ asset('assets/images/BannerS.png') }}" alt="S" class="footer-letter-img letter-s">
+                    <img src="{{ asset('assets/images/BannerH.png') }}" alt="H" class="footer-letter-img letter-h">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer-bottom">
