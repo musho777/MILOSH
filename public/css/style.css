@@ -139,9 +139,10 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
-    padding: 40px 5px;
+    padding: 40px 0;
     display: flex;
     align-items: center;
+    border: 5px solid black;
     border-top: 83px solid black;
     border-bottom: 83px solid black;
 }
@@ -1002,8 +1003,13 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .header__inner,
+@media (max-width: 870px) {
+    .header__inner {
+        padding: 0 15px;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
     .banner__inner {
         padding: 0 15px;
         justify-content: space-between;
@@ -1012,6 +1018,18 @@ body {
         padding: 0 15px;
     }
     .nav {
+        display: none;
+    }
+    .nav__list {
+        display: none;
+    }
+    .nav__icons {
+        display: none;
+    }
+    .nav__left {
+        display: none;
+    }
+    .nav__right {
         display: none;
     }
     .burger {
@@ -1026,10 +1044,6 @@ body {
     }
     .nav__dropdown li {
         font-size: 14px;
-    }
-    .nav__icons img {
-        width: 24px;
-        height: 24px;
     }
     .banner__text {
         font-size: 70px;
