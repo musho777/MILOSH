@@ -57,7 +57,18 @@
     </div>
 </div>
 <div class="banner">
-    <img class="banner__logo" src="{{ asset('images/banners/лого_баннер.svg') }}" alt="Баннер Лого">
+    <div class="banner__logo">
+        <div class="container">
+            <div class="banner__text">
+                <span>M</span>
+                <span>I</span>
+                <span>L</span>
+                <span>O</span>
+                <span>S</span>
+                <span>H</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 
