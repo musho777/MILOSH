@@ -60,12 +60,12 @@
     <div class="banner__logo">
         <div class="container">
             <div class="banner__text">
-                <span>M</span>
-                <span>I</span>
-                <span>L</span>
-                <span>O</span>
-                <span>S</span>
-                <span>H</span>
+                <img src="{{ asset('assets/images/M.png') }}" alt="M" class="letter-img letter-m">
+                <img src="{{ asset('assets/images/I.png') }}" alt="I" class="letter-img letter-i">
+                <img src="{{ asset('assets/images/L.png') }}" alt="L" class="letter-img letter-l">
+                <img src="{{ asset('assets/images/O.png') }}" alt="O" class="letter-img letter-o">
+                <img src="{{ asset('assets/images/S.png') }}" alt="S" class="letter-img letter-s">
+                <img src="{{ asset('assets/images/H.png') }}" alt="H" class="letter-img letter-h">
             </div>
         </div>
     </div>
