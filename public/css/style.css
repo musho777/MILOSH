@@ -837,14 +837,31 @@ body {
     min-width: 150px;
     text-align: center;
     /* Анимация */
-    max-height: 0;
-    overflow: hidden;
+    visibility: hidden;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transform: translateX(-50%) translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav__dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    border-top: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.nav__dropdown::after {
     content: "";
     position: absolute;
     top: -8px;
@@ -854,22 +871,11 @@ body {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid black;
+    border-bottom: 8px solid white;
     border-top: none;
-}
-
-.nav__dropdown::after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid white;
-    border-top: none;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .nav__dropdown li a {
@@ -887,7 +893,14 @@ body {
 
 /* Показываем подменю при наведении */
 .nav__item--has-dropdown:hover .nav__dropdown {
-    max-height: 300px; /* Достаточно для всех подэлементов */
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Показываем треугольники при наведении */
+.nav__item--has-dropdown:hover .nav__dropdown::before,
+.nav__item--has-dropdown:hover .nav__dropdown::after {
     opacity: 1;
 }
 
