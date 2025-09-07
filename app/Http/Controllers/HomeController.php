@@ -49,6 +49,11 @@ class HomeController extends Controller
         return view('news');
     }
 
+    public function showAlisaPage()
+    {
+        return view('alisa');
+    }
+
     public function showLoginPage()
     {
         return view('login');

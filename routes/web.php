@@ -25,6 +25,7 @@ Route::get('/casino', [HomeController::class, 'showCasinoPage'])->name('showCasi
 Route::get('/microfibra', [HomeController::class, 'showFibraPage'])->name('showFibraPage');
 Route::get('/manufacture', [HomeController::class, 'showManufacturePage'])->name('showManufacturePage');
 Route::get('/news', [HomeController::class, 'showNewsPage'])->name('showNewsPage');
+Route::get('/alisa', [HomeController::class, 'showAlisaPage'])->name('showAlisaPage');
 Route::get('/login', [HomeController::class, 'showLoginPage'])->name('showLoginPage');
 Route::get('/registration', [HomeController::class, 'showRegistrationPage'])->name('showRegistrationPage');
 Route::post('/register', [LoginController::class, 'register'])->name('register');
