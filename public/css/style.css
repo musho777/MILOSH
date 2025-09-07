@@ -781,15 +781,14 @@ body {
 }
 
 .image-wrapper {
-    position: relative; /* для абсолютного позиционирования смайлика внутри */
-    width: 100%; /* как у main-img */
-    top: -470px;
+    width: 100%;
+    height: 100%;
 }
 
 .main-img {
     width: 100%;
     height: 100%;
-    z-index: 0;
+    object-fit: contain;
 }
 
 .smile {

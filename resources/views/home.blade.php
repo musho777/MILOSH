@@ -81,11 +81,17 @@
                 <img class="alisa" src="{{ asset('images/banners/алиса.png') }}" alt="Left Split">
             </div>
             <div class="right-block">
-                <img class="subtract-img" src="{{ asset('images/banners/Subtract.png') }}" alt="Subtract">
-
-                <!-- Надпись поверх Subtract -->
-                <img class="text-overlay" src="{{ asset('images/banners/о бренде.png') }}" alt="О бренде">
+                <div>
+                    <img class="subtract-img" src="{{ asset('images/banners/Subtract.png') }}" alt="Subtract">
+                    <img class="text-overlay" src="{{ asset('images/banners/о бренде.png') }}" alt="О бренде">
+                </div>
+                 <div class="image-wrapper">
+                     <img class="main-img" src="{{ asset('assets/images/картина-анимация.png') }}" alt="Right Split">
+                 </div>
             </div>
+
+        </div>
+        <div>
 
         </div>
         <div class="image-wrapper">
