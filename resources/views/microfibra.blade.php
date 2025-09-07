@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>МИКРОФИБРА</title>
-    <link rel="stylesheet" href="{{asset('css/cart.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
