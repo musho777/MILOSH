@@ -91,12 +91,8 @@
             </div>
 
         </div>
-        <div>
-
-        </div>
-        <div class="image-wrapper">
-            <img class="main-img" src="{{ asset('animations/003.svg') }}" alt="Right Split">
-            {{--                <img class="smile" src="{{ asset('images/banners/smile.svg') }}" alt="smile">--}}
+        <div class="image-wrapper1">
+            <img class="main-img1" src="{{ asset('animations/003-2b.svg') }}" alt="Right Split">
         </div>
     </section>
     <section class="grid-section">
