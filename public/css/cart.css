@@ -286,7 +286,9 @@ body.sidebar-open .product-row {
 .nav__dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
     background-color: white;
     border: 1.5px solid black;
     z-index: 999;
@@ -298,6 +300,34 @@ body.sidebar-open .product-row {
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.4s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav__dropdown::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid black;
+    border-top: none;
+}
+
+.nav__dropdown::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid white;
+    border-top: none;
 }
 
 .nav__dropdown li a {
@@ -327,6 +357,6 @@ body.sidebar-open .product-row {
 /* 🔴 Цвет при наведении */
 .nav__list > li > a:hover,
 .nav__dropdown li a:hover {
-    color: red;
-    background-color: #f9f9f9;
+    color: black;
+    background-color: #f00;
 }
