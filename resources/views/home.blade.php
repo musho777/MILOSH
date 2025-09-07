@@ -86,7 +86,7 @@
                     <img class="text-overlay" src="{{ asset('images/banners/о бренде.png') }}" alt="О бренде">
                 </div>
                  <div class="image-wrapper">
-                     <img class="main-img" src="{{ asset('assets/images/картина-анимация.png') }}" alt="Right Split">
+                     <img class="main-img" src="{{ asset('animations/003-2a.svg') }}" alt="Right Split">
                  </div>
             </div>
 
