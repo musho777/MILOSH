@@ -913,6 +913,9 @@ body {
 .nav__list > li > a:hover,
 .nav__dropdown li a:hover {
     color: black;
+}
+.nav__dropdown li a:hover {
+    color: black;
     background-color: #f00;
 }
 
