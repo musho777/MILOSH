@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/shop.css')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
