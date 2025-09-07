@@ -56,6 +56,6 @@
         <td></td>
     </tr>
 </table>
-
+@include('layouts.footer')
 </body>
 </html>

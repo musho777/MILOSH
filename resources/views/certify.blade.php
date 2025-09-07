@@ -25,7 +25,7 @@
             ЕАЭС N RU Д-RU.ПА01.В.48132/24</p>
     </div>
 </section>
-
+@include('layouts.footer')
 </body>
 <style>
 

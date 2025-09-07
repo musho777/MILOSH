@@ -142,5 +142,7 @@
     </section>
 </div>
 
+@include('layouts.footer')
+
 </body>
 </html>

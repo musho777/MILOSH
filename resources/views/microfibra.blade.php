@@ -85,3 +85,6 @@
 
     }
 </style>
+@include('layouts.footer')
+</body>
+</html>

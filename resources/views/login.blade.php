@@ -151,6 +151,6 @@
         passwordField.type = type;
     }
 </script>
-
+@include('layouts.footer')
 </body>
 </html>

@@ -88,6 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
         width: auto;
     }
 </style>
-
+@include('layouts.footer')
 </body>
 </html>

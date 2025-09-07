@@ -50,6 +50,7 @@
 <div>
     <img style="display: block;" src="{{ asset('animations/n1.svg') }}" alt="Subtract">
 </div>
+@include('layouts.footer')
 </body>
 <style>
     .product-row {
