@@ -767,11 +767,15 @@ body {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
+    justify-content: center;
+    padding: 20px 0px;
     font-size: 12px;
     align-items: center;
     background-color: #000;
+}
+.social-icons {
+    position: absolute;
+    right: 60px;
 }
 
 .social-icons i {
