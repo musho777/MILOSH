@@ -76,10 +76,10 @@
     <section class="section">
         <div class="block-500px"></div>
         <div class="split-50">
-            <div class="left-block">
+            <a href="{{ route('showAlisaPage') }}" class="left-block" style="text-decoration: none;">
                 <img src="{{ asset('images/banners/left_split.png') }}" alt="Left Split">
                 <img class="alisa" src="{{ asset('images/banners/алиса.png') }}" alt="Left Split">
-            </div>
+            </a>
             <div class="right-block">
                 <div>
                     <img class="subtract-img" src="{{ asset('images/banners/Subtract.png') }}" alt="Subtract">
