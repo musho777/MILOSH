@@ -34,12 +34,13 @@
     .casino-container {
         display: flex;
         width: 100%;
-        height: 100dvh; /* теперь точно вся высота экрана */
+        height: 100vh;
     }
 
     .left-side,
     .right-side {
         flex: 1;
+        height: 100%;
     }
 
     .left-side {
@@ -49,38 +50,39 @@
     .left-side img {
         height: 100%;      /* растягивает изображение по высоте */
         width: 100%;
-        object-fit: cover; /* сохраняет пропорции и обрезает лишнее */
+        object-fit: cover; 
         display: block;
     }
 
     .right-side{
+        border-right: 5px solid black;
         display: flex;
         flex-direction: column;
         height: 100%;
-        border: 5px solid black;
-        border-left: 0;
-        border-top: 0
-    }
-
-    .animation-zone {
-        height: auto;
-        display: block;
-        z-index: 1;
-
+        background-color: #D2F8A9;
+        min-height: 100vh;
     }
 
     .right-side img {
-        height: 102%;      /* растягивает изображение по высоте */
+        height: 100%;      /* растягивает изображение по высоте */
         width: 100%;
         object-fit: cover; /* сохраняет пропорции и обрезает лишнее */
         display: block;
+    }
+
+    .animation-zone {
+        height: 50%;
+        display: block;
+        z-index: 1;
+        overflow: hidden;
     }
 
     .right-bottom{
         background-color: #D2F8A9;
         width: 100%;
-        flex: 1; /* занимает всё оставшееся пространство */
-        margin-top: -34px;
+        height: 50%; /* точно половина высоты, как и animation-zone */
+        position: relative;
+        z-index: 2;
     }
 
     .text-zone {
@@ -98,7 +100,138 @@
 
     .text-zone p {
         font-size: 11.7px;
+    }
 
+    /* Desktop responsive breakpoints */
+    @media (min-width: 1980px) {
+        .casino-container {
+            height: 100vh;
+        }
+
+        .animation-zone {
+            height: 50%;
+        }
+
+        .right-bottom {
+            height: 50%;
+        }
+
+        .text-zone {
+            padding: 80px 100px;
+        }
+
+        .text-zone h3 {
+            font-size: 40px;
+        }
+
+        .text-zone p {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 1920px) and (max-width: 1979px) {
+        .casino-container {
+            height: 100vh;
+        }
+
+        .animation-zone {
+            height: 50%;
+        }
+
+        .right-bottom {
+            height: 50%;
+        }
+
+        .text-zone {
+            padding: 70px 85px;
+        }
+
+        .text-zone h3 {
+            font-size: 36px;
+        }
+
+        .text-zone p {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 1366px) and (max-width: 1919px) {
+        .casino-container {
+            height: 100vh;
+        }
+
+        .animation-zone {
+            height: 50%;
+        }
+
+        .right-bottom {
+            height: 50%;
+        }
+
+        .text-zone {
+            padding: 60px 80px;
+        }
+
+        .text-zone h3 {
+            font-size: 32px;
+        }
+
+        .text-zone p {
+            font-size: 12px;
+        }
+    }
+
+    /* Responsive breakpoints for mobile */
+    @media (max-width: 870px) {
+        .casino-container {
+            flex-direction: column;
+        }
+
+        .left-side {
+            border-right: 0;
+            border-bottom: 5px solid black;
+            height: 50vh;
+        }
+
+        .right-side {
+            border: 5px solid black;
+            border-top: 0;
+            height: auto;
+            min-height: 50vh;
+        }
+
+        .text-zone {
+            padding: 30px 20px;
+        }
+
+        .text-zone h3 {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .casino-container {
+        }
+
+        .left-side {
+            height: 40vh;
+        }
+
+        .right-side {
+            min-height: 40vh;
+        }
+
+        .text-zone {
+            padding: 20px 15px;
+        }
+
+        .text-zone h3 {
+            font-size: 20px;
+        }
+
+        .text-zone p {
+            font-size: 10px;
+        }
     }
 
 </style>
