@@ -70,11 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .contact-container {
         display: flex;
         justify-content: center;
-        align-items: center;
         border: 5px solid black;
         flex-direction: column;
-        height: 100dvh;
-        padding: 30px 0;
         box-sizing: border-box;
     }
 
@@ -82,7 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
         flex: 0 0 44%;
     }
 
-
+    .contact{
+       display: flex;
+        justify-content: center;
+        margin:50px 0;
+    }
     .contact-img {
         max-height: 80vh;
         width: auto;
