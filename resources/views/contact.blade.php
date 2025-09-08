@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="page-wrapper">
 @include('layouts.header')
 <div class="contact-container">
     <div class="contact">
@@ -66,6 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </svg>
 </div>
 <style>
+    /* Page specific overrides if needed */
+    .page-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
     .contact-container {
         display: flex;
@@ -73,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         border: 5px solid black;
         flex-direction: column;
         box-sizing: border-box;
+        flex: 1;
     }
 
     .nav__right{
@@ -90,5 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 </style>
 @include('layouts.footer')
+</div>
 </body>
 </html>

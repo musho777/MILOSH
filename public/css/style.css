@@ -4,10 +4,51 @@
     font-family: "Comfortaa", cursive, sans-serif;
     padding: 0;
 }
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
     font-family: "Comfortaa", cursive, sans-serif;
     color: #000;
     background-color: #ffffff;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Ensure all content except footer expands */
+body > *:not(.footer):not(script):not(style) {
+    flex: 1 0 auto;
+}
+
+/* Wrapper for main content */
+.main-wrapper,
+.content-area,
+body > div:first-child:not(.footer) {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Global page wrapper for sticky footer */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main,
+.main-content,
+.content-wrapper {
+    flex: 1 0 auto;
 }
 
 .container {
@@ -650,6 +691,14 @@ body {
     background: #000;
     color: #ecbb45;
     font-family: sans-serif;
+    margin-top: auto !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer-top {
@@ -1330,4 +1379,42 @@ body {
 /* Body lock when menu is open */
 body.locked {
     overflow: hidden;
+}
+
+/* Ensure footer stays at bottom for all screen sizes */
+@media screen {
+    html, body {
+        height: 100%;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+}
+
+/* Ultra-wide screen specific adjustments */
+@media (min-width: 2000px) {
+    body {
+        min-height: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Main content areas */
+    .page-wrapper,
+    .contact-container,
+    .casino-container,
+    body > div:not(.footer):not(script):not(style) {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer {
+        flex: 0 0 auto;
+        margin-top: auto;
+    }
 }
