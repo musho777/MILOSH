@@ -23,15 +23,16 @@ body {
     position: relative;
 }
 
-/* Ensure all content except footer expands */
-body > *:not(.footer):not(script):not(style) {
+/* Main content wrapper for proper footer positioning */
+#app,
+.app-wrapper,
+main {
     flex: 1 0 auto;
 }
 
 /* Wrapper for main content */
 .main-wrapper,
-.content-area,
-body > div:first-child:not(.footer) {
+.content-area {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -1381,12 +1382,10 @@ body.locked {
     overflow: hidden;
 }
 
-/* Ensure footer stays at bottom for all screen sizes */
-@media screen {
-    html, body {
-        height: 100%;
-    }
-    
+/* Remove the problematic media queries that break functionality */
+
+/* Sticky footer solution for all screen sizes */
+@supports (display: flex) {
     body {
         display: flex;
         flex-direction: column;
@@ -1394,27 +1393,72 @@ body.locked {
     }
 }
 
-/* Ultra-wide screen specific adjustments */
+/* Large screen specific adjustments */
 @media (min-width: 2000px) {
-    body {
-        min-height: 100vh;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
+    /* Header alignment fix */
+    .header__inner {
+        max-width: 1980px;
+        margin: 0 auto;
+        width: 100%;
     }
-    
-    /* Main content areas */
-    .page-wrapper,
+
+    /* Banner text centering fix */
+    .banner__logo .container,
+    .banner__inner {
+        max-width: 1980px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .banner__text {
+        justify-content: space-between;
+        padding: 0 0px;
+        max-width: 1980px;
+        margin: 0 auto;
+    }
+
+    /* Footer alignment to match header */
+    .footer-middle__logo .container {
+        max-width: 1980px;
+        margin: 0 auto;
+    }
+
+    .footer-middle__text {
+        justify-content: space-between;
+        padding: 0 60px;
+        max-width: 1980px;
+        margin: 0 auto;
+    }
+
+    .footer-top {
+        max-width: 1980px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .footer-bottom {
+        max-width: 1980px;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Ensure content areas fill space without breaking JS */
     .contact-container,
     .casino-container,
-    body > div:not(.footer):not(script):not(style) {
-        flex: 1 1 auto;
-        display: flex;
-        flex-direction: column;
+    .page-wrapper,
+    .content-wrapper {
+        min-height: calc(100vh - 400px);
+        flex: 1;
     }
-    
-    .footer {
-        flex: 0 0 auto;
-        margin-top: auto;
+
+    /* Keep fixed elements in place */
+    [style*="position: fixed"],
+    [style*="position:fixed"],
+    .fixed,
+    .chat-widget,
+    #chatWidget,
+    #searchContainer {
+        position: fixed !important;
     }
 }
