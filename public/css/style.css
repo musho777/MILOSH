@@ -58,19 +58,26 @@ main,
     justify-content: center;
 }
 .header {
-    padding: 20px 0;
     background: #ffffff;
     border: 5px solid black;
     border-bottom: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .header__inner {
     width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 1980px) {
+    .header__inner {
+        height: 120px;
+    }
 }
 
 .nav {
@@ -354,6 +361,11 @@ main,
     padding: 0; /* важно! */
     margin: 0; /* важно! */
     box-sizing: border-box;
+}
+.headerLine {
+    height: 100%;
+    width: 5px;
+    background-color: #000;
 }
 
 /* Блок, занимающий две строки */
@@ -886,6 +898,9 @@ main,
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .nav__list > li {

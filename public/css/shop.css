@@ -1,5 +1,3 @@
-
-
 .shop-container {
     width: 100%;
     margin: 0 auto;
@@ -29,10 +27,9 @@
     line-height: 1.4;
     color: #444;
     margin-bottom: 100px;
-
 }
 
-a{
+a {
     list-style: none;
     text-decoration: none;
     color: black;
@@ -51,9 +48,9 @@ a{
     font-size: 1.5rem;
     text-align: center;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
 }
-
-
 
 .product-row {
     display: grid;
@@ -107,7 +104,6 @@ a{
     margin: 20px 0;
 }
 
-
 .product-sidebar button {
     background: black;
     color: white;
@@ -136,8 +132,8 @@ a{
     border-bottom: 1px solid black;
 }
 
-
-.info-text, .contacts {
+.info-text,
+.contacts {
     margin-top: 40px;
     font-size: 14px;
     gap: 20px;
@@ -145,13 +141,11 @@ a{
     flex-direction: column;
 }
 
-
-.black-line{
+.black-line {
     height: 5px;
     width: 200px;
     background-color: black;
 }
-
 
 .product-info {
     position: relative;
@@ -160,13 +154,12 @@ a{
 
 .absolute-arrow {
     position: absolute;
-    right:40px; /* прижимаем к правому краю */
+    right: 40px; /* прижимаем к правому краю */
     top: 68%; /* центрируем по высоте */
     transform: translateY(-50%);
     width: 22px; /* при необходимости */
     height: auto;
 }
-
 
 .title-with-fav {
     display: flex;
@@ -187,7 +180,6 @@ a{
     margin-right: 28px;
 }
 
-
 .marquee {
     width: 100%;
     overflow: hidden;
@@ -196,7 +188,7 @@ a{
     border-top: 1px solid #000;
     padding: 10px 0;
     font-size: 16px;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     position: relative;
 }
 
@@ -215,7 +207,7 @@ a{
     }
 }
 
-.footer-text{
+.footer-text {
     height: 100px;
     text-align: center;
     border: 2px solid black;
@@ -229,7 +221,6 @@ body.sidebar-open .product-row {
     width: 55.3%;
     box-sizing: border-box;
 }
-
 
 /* Media Queries for Responsive Design */
 @media (min-width: 1920px) and (max-width: 1979px) {

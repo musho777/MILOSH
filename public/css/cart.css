@@ -234,6 +234,8 @@ a {
     font-size: 1.5rem;
     text-align: center;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
 }
 
 .cart-row {

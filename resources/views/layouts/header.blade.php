@@ -33,6 +33,7 @@
                                 <li><a href="{{route('showCasinoPage')}}">КАЗИНО</a></li>
                             </ul>
                         </li>
+                        <div  class = "headerLine"></div>
                     </ul>
                     <ul class="nav__icons">
                         <li id="openSearch"><a href="#"><img src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск"></a></li>
