@@ -64,14 +64,13 @@
     }
 
     .right-side img {
-        height: 100%;      /* растягивает изображение по высоте */
-        width: 100%;
-        object-fit: cover; /* сохраняет пропорции и обрезает лишнее */
+        width: 104%;
+        margin-left:-30px;
+        object-fit: cover;
         display: block;
     }
 
     .animation-zone {
-        height: 50%;
         display: block;
         z-index: 1;
         overflow: hidden;
@@ -109,7 +108,6 @@
         }
 
         .animation-zone {
-            height: 50%;
         }
 
         .right-bottom {
@@ -117,7 +115,7 @@
         }
 
         .text-zone {
-            padding: 80px 100px;
+            padding: 50px 100px;
         }
 
         .text-zone h3 {
