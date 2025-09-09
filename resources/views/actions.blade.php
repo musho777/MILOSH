@@ -44,7 +44,6 @@
 <style>
 
     .container-actions {
-        margin: 0 auto;
         border: 4px solid #000;
     }
 
