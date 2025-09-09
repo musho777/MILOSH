@@ -104,7 +104,7 @@
         <!-- Tall блок (занимает 2 строки) -->
         <div class="grid-item tall">
             <div class="tall-left bg-lenta">
-                <img  src="{{ asset('images/banners/лента.png') }}" alt="О бренде">
+                <!-- <img  src="{{ asset('images/banners/лента.png') }}" alt="О бренде"> -->
             </div>
             <div class="tall-right">
                 <div class="tall-top bg-int-top">

@@ -10,15 +10,20 @@
         .hit-product-container {
             display: flex;
             width: 100%;
-            height: 100vh; /* фиксируем высоту на весь экран */
-            min-height: 600px;
             border: 5px solid black;
+            border-bottom:0;
+            border-top:0;
         }
 
         .left-side,
         .right-side {
             flex: 1;
             position: relative;
+            height: 100%;
+            background-color: #F5DEA4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
 
@@ -38,6 +43,7 @@
             justify-content: space-between;
             border-right: 5px solid black;
             overflow: hidden;
+            height: auto;
         }
 
         .fone {
@@ -54,7 +60,7 @@
         }
 
         .left-side-bottom {
-            border-top: 5px solid black;
+            /* border-top: 5px solid black; */
         }
 
         .left-side-bottom img {
@@ -68,7 +74,9 @@
         .right-side {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            /* align-items: center; */
+        }
+        .right-side  div{
         }
 
         .green-zone {
@@ -80,25 +88,36 @@
         .green-zone img {
             max-height: 100%;
             max-width: 100%;
+            width: 100%;
         }
 
         .text-zone {
             flex: 1;
-            padding: 15px 71px;
-            background-color: #F5DEA4;
+            padding: 15px ;
             color: #784416;
             display: flex;
             flex-direction: column;
             gap: 15px;
+            max-width: 663px;
         }
-
-        .text-zone h3 {
-            font-size: 28px;
+        .title{
+            color:#CE823E;
+            font-family: "Comfortaa";
+            font-weight: 700;
+            font-size: 32px !important;
+            vertical-align: middle;
         }
-
-        .text-zone p {
-            font-size: 11.7px;
-
+        .text-zonep {
+            font-size: 16px;
+             color:#784416;
+            font-family: "Comfortaa";
+            font-weight: 700;
+            vertical-align: middle;
+            width: 663px;
+            font-family: Comfortaa;
+            line-height: 150%;
+            letter-spacing: -1.1%;
+            padding-bottom:40px;
         }
     </style>
 </head>
@@ -118,9 +137,10 @@
             <img class="green-zone-img" src="{{ asset('images/banners/мануфактура.png') }}" alt="Зелёная зона">
         </div>
         <div class="text-zone">
-            <h3>Мануфактура</h3>
-            <p>«Статус бренда – высокая репутация:
-                не следует торговать именем – имя следует заработать»<br>
+            <p class="title" >Мануфактура</p>
+            <p class = "text-zonep">«Статус бренда – высокая репутация: 
+            не следует торговать именем – имя следует заработать»</p>
+            <p class = "text-zonep">
                 MILOSН – это компания новой формации, создающая
                 кожгалантерею класса люкс.
                 Производство выстраивается по системе «Поток единичных изделий».<br>Марка предлагает стильный и новаторский продукт, отвечающий современным потребностям настоящих ценителей безупречного качества. Продукция MILOSН отличается своей целостностью<br>и роскошной лаконичностью, тщательно выверенным стилем
