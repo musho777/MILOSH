@@ -20,7 +20,8 @@
         .right-side {
             flex: 1;
             position: relative;
-            height: 100%;
+            min-height: 100%;
+            height:auto;
             background:rgba(0, 189, 255, 0.11);
             display: flex;
             justify-content: center;
@@ -61,6 +62,7 @@
         }
 
         .left-side-bottom {
+            width: 100%;
             /* border-top: 5px solid black; */
         }
 
@@ -82,6 +84,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
         .green-zone img {

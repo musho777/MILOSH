@@ -20,7 +20,8 @@
         .right-side {
             flex: 1;
             position: relative;
-            height: 100%;
+            min-height: 100%;
+            height:auto;
             background-color: #F5DEA4;
             display: flex;
             justify-content: center;
