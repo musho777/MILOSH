@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Хит-Продукт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
@@ -34,7 +35,7 @@
     .casino-container {
         display: flex;
         width: 100%;
-        height: 100vh;
+        height: 1000px;
     }
 
     .left-side,
@@ -48,7 +49,7 @@
     }
 
     .left-side img {
-        height: 100%;      /* растягивает изображение по высоте */
+        height: 1000px;      /* растягивает изображение по высоте */
         width: 100%;
         object-fit: cover; 
         display: block;
@@ -60,7 +61,6 @@
         flex-direction: column;
         height: 100%;
         background-color: #D2F8A9;
-        min-height: 100vh;
     }
 
     .right-side img {
@@ -104,7 +104,7 @@
     /* Desktop responsive breakpoints */
     @media (min-width: 1980px) {
         .casino-container {
-            height: 100vh;
+            height: 1000px;
         }
 
         .animation-zone {
@@ -129,11 +129,10 @@
 
     @media (min-width: 1920px) and (max-width: 1979px) {
         .casino-container {
-            height: 100vh;
+            height: 1000px;
         }
 
         .animation-zone {
-            height: 50%;
         }
 
         .right-bottom {
@@ -155,11 +154,10 @@
 
     @media (min-width: 1366px) and (max-width: 1919px) {
         .casino-container {
-            height: 100vh;
+            height: 1000px;
         }
 
         .animation-zone {
-            height: 50%;
         }
 
         .right-bottom {
@@ -182,20 +180,22 @@
     /* Responsive breakpoints for mobile */
     @media (max-width: 870px) {
         .casino-container {
-            flex-direction: column;
+                flex-direction: column-reverse;
+           
         }
 
         .left-side {
             border-right: 0;
             border-bottom: 5px solid black;
-            height: 50vh;
+            width: 100%;
+            height: 50%;
         }
 
         .right-side {
             border: 5px solid black;
             border-top: 0;
             height: auto;
-            min-height: 50vh;
+            width: 100%;
         }
 
         .text-zone {
@@ -206,6 +206,46 @@
             font-size: 24px;
         }
     }
+      @media (max-width: 768px) {
+            .casino-container {
+                flex-direction: column-reverse;
+                height: auto;
+            }
+            .left-side img{
+                width: 100%;
+            }
+            .left-side {
+                border-right: 0;
+                border-bottom: 5px solid black;
+                width: 100%;
+                height: auto;
+                min-height: 250px;
+            }
+            
+            .right-side {
+                width: 100%;
+                height: auto;
+            }
+            
+            .text-zone {
+                padding: 12px;
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .text-zonep {
+                font-size: 14px;
+                line-height: 1.4;
+                padding-bottom: 12px;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
 
     @media (max-width: 480px) {
         .casino-container {

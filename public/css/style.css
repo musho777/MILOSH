@@ -539,8 +539,14 @@ main,
 .right-one {
     height: 605px;
 }
-.right-side div {
-    /* border: 2px solid black; */
+.right-four {
+    border-top: 0;
+}
+.right-one {
+    border-bottom: 0;
+}
+.right-sidediv {
+    border: 2px solid black;
 }
 
 .right-three-img {

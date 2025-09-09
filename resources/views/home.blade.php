@@ -136,14 +136,14 @@
 
         </div>
         <div class="right-side">
-            <div class="right-one"></div>
-            <div class="right-two"></div>
-            <div class="right-three">
+            <div class="right-one right-sidediv"></div>
+            <div class="right-two right-sidediv"></div>
+            <div class="right-three right-sidediv">
                 <a href="{{route('showFibraPage')}}">
                     <img class="right-three-img" src="{{ asset('images/banners/фото_товара.png') }}" alt="Banner Image">
                 </a>
             </div>
-            <div class="right-four"></div>
+            <div class="right-four right-sidediv"></div>
         </div>
     </div>
     <div class="car">
