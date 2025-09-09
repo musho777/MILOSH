@@ -66,6 +66,8 @@
         <div class="product-box">Товар 6</div>
         <div class="product-box">Товар 7</div>
         <div class="product-box">Товар 8</div>
+        <div class="product-box">Товар 9</div>
+        <div class="product-box">Товар 10</div>
     </div>
 
     <div class="footer-text">

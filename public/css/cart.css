@@ -369,7 +369,7 @@ body.sidebar-open .product-row {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    width: 55.3%;
+    width: calc(100% - 668px);
     box-sizing: border-box;
 }
 

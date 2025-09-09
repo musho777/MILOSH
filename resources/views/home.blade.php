@@ -108,10 +108,10 @@
             </div>
             <div class="tall-right">
                 <div class="tall-top bg-int-top">
-                    <img  src="{{ asset('images/banners/магазин-интерьер.png') }}" alt="О бренде">
+                    <!-- <img  src="{{ asset('images/banners/магазин-интерьер.png') }}" alt="О бренде"> -->
                 </div>
                 <div class="tall-bottom bg-int-bottom">
-                    <img  src="{{ asset('images/banners/магазин-интерьер (1).png') }}" alt="О бренде">
+                    <!-- <img  src="{{ asset('images/banners/магазин-интерьер (1).png') }}" alt="О бренде"> -->
                 </div>
             </div>
         </div>

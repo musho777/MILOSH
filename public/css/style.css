@@ -347,6 +347,7 @@ main,
     width: 100%;
     margin: 0 auto;
     gap: 0;
+    margin-top: -15px;
 }
 
 .grid-item {
@@ -440,11 +441,22 @@ main,
     align-items: flex-start; /* выравнивание по верхнему краю */
     justify-content: flex-start; /* выравнивание по левому краю */
 }
-
 .grid-item img {
-    display: block; /* устранит пробелы вокруг inline-картинок */
+    display: block;
     padding: 0;
     border: none;
+    object-fit: none;
+    margin-top: -2px;
+}
+.bg-int-top {
+    background-image: url("/images/banners/магазин-интерьер2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-int-bottom {
+    background-image: url("/images/banners/магазин-интерьер3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .magazine_text {
@@ -876,10 +888,11 @@ main,
     object-fit: contain;
 }
 .main-img1 {
-    width: 100%;
+    /* width: 120%; */
     object-fit: cover;
 }
 .image-wrapper1 {
+    /* height: 250px; */
 }
 
 .smile {
@@ -1025,6 +1038,9 @@ main,
         padding: 0 60px;
         justify-content: space-between;
     }
+    /* .grid-section {
+        grid-template-rows: repeat(2, 500px);
+    } */
     .banner__logo .container {
         max-width: 1920px;
         padding: 0 60px;
@@ -1067,6 +1083,27 @@ main,
         height: 98px;
     }
 }
+
+/* @media (max-width: 1400px) {
+    .container1,
+    .container2,
+    .container3 {
+        height: 800px;
+    }
+    .left-side {
+        height: 800p x;
+    }
+    .right-side {
+        height: 800px;
+    }
+    .right-one {
+        height: 400px;
+    }
+    .left-divs,
+    .right-divs {
+        height: 800px;
+    }
+} */
 
 @media (min-width: 1980px) {
     .header {
@@ -1163,11 +1200,14 @@ main,
     }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1600px) {
     .header__inner,
     .banner__inner {
         padding: 0 30px;
         justify-content: space-between;
+    }
+    .grid-section {
+        grid-template-rows: repeat(2, 500px);
     }
     .banner__logo .container {
         padding: 0 30px;
@@ -1195,7 +1235,7 @@ main,
         letter-spacing: 0;
     }
     .container2 {
-        height: 580px;
+        height: 1080px;
     }
     .container3 {
         height: 580px;
