@@ -869,8 +869,12 @@ main,
     height: 100%;
     object-fit: contain;
 }
+.main-img1 {
+    width: 100%;
+    object-fit: cover;
+}
 .image-wrapper1 {
-    height: 300px;
+    height: 154px;
 }
 
 .smile {
@@ -898,6 +902,11 @@ main,
     list-style: none;
     padding: 0;
     margin: 0;
+    /* display: flex; */
+    align-items: center;
+    height: 100%;
+}
+.nav__list {
     display: flex;
     align-items: center;
     height: 100%;
@@ -911,11 +920,11 @@ main,
     position: absolute;
     top: 100%;
     left: 50%;
+    height: auto;
     transform: translateX(-50%);
     margin-top: 10px;
     background-color: white;
-    border: 1.5px solid black;
-    z-index: 999;
+    z-index: 99999999;
     min-width: 150px;
     text-align: center;
     /* Анимация */
@@ -1002,7 +1011,7 @@ main,
 }
 
 /* Desktop breakpoints for logo, nav dropdown, nav icons, header, and banner */
-@media (min-width: 1920px) and (max-width: 1979px) {
+@media (min-width: 1400px) {
     .header {
     }
     .header__inner,
@@ -1111,8 +1120,6 @@ main,
         height: 114px;
     }
     .main-img1 {
-        height: 400px;
-        width: 100%;
         object-fit: cover;
     }
 }
@@ -1217,7 +1224,7 @@ main,
     }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 980px) {
     .header__inner {
         padding: 0 15px;
         justify-content: space-between;
@@ -1312,11 +1319,36 @@ main,
     left: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     z-index: 1000;
     transition: left 0.3s ease;
     overflow-y: auto;
     padding: 80px 20px 20px;
+}
+
+.mobile-menu__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    pointer-events: auto;
+    user-select: none;
+}
+
+.mobile-menu__close:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
 }
 
 .mobile-menu.active {

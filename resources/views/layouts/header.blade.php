@@ -52,6 +52,7 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu">
+    <button class="mobile-menu__close" aria-label="Close menu">✕</button>
     <ul class="mobile-menu__list">
         <li><a href="{{route('showGalleryPage')}}">Галерея</a></li>
         <li class="mobile-menu__item--has-dropdown">

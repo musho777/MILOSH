@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.burger');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu__close');
+    console.log('Mobile menu close button found:', mobileMenuClose);
     const body = document.querySelector('body');
     const dropdownItems = document.querySelectorAll('.mobile-menu__item--has-dropdown');
 
@@ -11,6 +13,30 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.toggle('active');
             body.classList.toggle('locked');
         });
+    }
+
+    // Close mobile menu with X button
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function(e) {
+            console.log('Close button clicked');
+            e.preventDefault();
+            e.stopPropagation();
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('locked');
+        });
+        
+        // Also add touch event for mobile devices
+        mobileMenuClose.addEventListener('touchstart', function(e) {
+            console.log('Close button touched');
+            e.preventDefault();
+            e.stopPropagation();
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('locked');
+        });
+    } else {
+        console.log('Mobile menu close button not found in DOM');
     }
 
     // Handle dropdown menus in mobile
@@ -25,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
         if (mobileMenu && mobileMenu.classList.contains('active')) {
+            // Don't close if clicking the close button - let its handler do it
+            if (mobileMenuClose && mobileMenuClose.contains(e.target)) {
+                return;
+            }
             if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
                 burger.classList.remove('active');
                 mobileMenu.classList.remove('active');
@@ -35,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close menu on window resize if screen gets larger
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 980) {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('locked');
