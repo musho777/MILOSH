@@ -524,13 +524,13 @@ main,
     border: 2px solid black;
     border-right: 0;
     width: 50%; /* или задай нужную ширину */
-    height: 1416px; /* для примера */
+    height: 100%; /* для примера */
 }
 
 .right-side {
     border: 2px solid black;
     width: 50%;
-    height: 1416px;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0fr 1fr;
@@ -540,7 +540,7 @@ main,
     height: 605px;
 }
 .right-side div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .right-three-img {
@@ -584,7 +584,6 @@ main,
     width: 100%;
     overflow: hidden;
     z-index: 10;
-    height: 530px;
     margin-top: -140px;
 }
 
@@ -653,7 +652,7 @@ main,
 .container3 {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 1416px;
     border: 2px solid black;
     position: relative;
 }
@@ -1188,6 +1187,24 @@ main,
     .footer-middle__text {
         font-size: 140px;
         letter-spacing: 0;
+    }
+    .container2 {
+        height: 580px;
+    }
+    .container3 {
+        height: 580px;
+    }
+    .right-one {
+        height: 300px;
+    }
+    .right-side {
+        height: 800px;
+    }
+    .left-side {
+        height: 850px;
+    }
+    .container1 {
+        height: 850px;
     }
 }
 
