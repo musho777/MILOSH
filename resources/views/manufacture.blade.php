@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Хит-Продукт</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
@@ -118,7 +119,89 @@
             line-height: 150%;
             letter-spacing: -1.1%;
             padding-bottom:40px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
+
+        /* Responsive styles to fix UI crash */
+        @media (max-width: 1300px) {
+            .hit-product-container {
+                height: auto;
+            }
+            
+            .left-side,
+            .right-side {
+                flex: 1;
+                height: auto;
+            }
+            
+            .right-side {
+                overflow-x: hidden;
+            }
+            
+            .text-zone {
+                padding: 15px;
+                max-height: none;
+                overflow: visible;
+                width: 100%;
+            }
+            
+            .text-zonep {
+                width: 100%;
+                max-width: 100%;
+                font-size: 12px;
+                line-height: 1.4;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+            }
+            
+            .title {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hit-product-container {
+                flex-direction: column-reverse;
+                height: auto;
+            }
+            
+            .left-side {
+                border-right: 0;
+                border-bottom: 5px solid black;
+                width: 100%;
+                height: auto;
+                min-height: 250px;
+            }
+            
+            .right-side {
+                width: 100%;
+                height: auto;
+            }
+            
+            .text-zone {
+                padding: 12px;
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .text-zonep {
+                font-size: 14px;
+                line-height: 1.4;
+                padding-bottom: 12px;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+
+
     </style>
 </head>
 <body>

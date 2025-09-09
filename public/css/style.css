@@ -528,7 +528,6 @@ main,
 
 .right-side div {
     /* border: 2px solid black; */
-    height: 139px;
 }
 
 .right-three-img {
@@ -714,6 +713,12 @@ main,
     flex-wrap: wrap;
     padding: 30px 60px;
     justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        gap: 40px;
+    }
 }
 
 .line {
