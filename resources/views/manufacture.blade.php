@@ -44,7 +44,7 @@
             flex-direction: column;
             justify-content: space-between;
             border-right: 5px solid black;
-            overflow: hidden;
+              overflow: visible;
             height: auto;
         }
 
@@ -61,7 +61,41 @@
             z-index: 1;
         }
 
+        .basket-icon{
+            width: 400px;
+            height: 50px;
+            position: absolute;
+            left: 100%;
+            top: -250px;
+            transform: translateX(-50%);
+            z-index: 10;
+            border-radius: 50%;
+            >img{
+                width: 400px;
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 1980px) {
+            .basket-icon{
+                width: 200px;
+                top: -125px;
+                >img{
+                    width: 200px;
+                    height: 190px;
+                }
+            }
+        }
+
+        @media (max-width: 780px) {
+            .basket-icon{
+                display: none;
+            }
+        }
+
         .left-side-bottom {
+              position: relative;
+            overflow: visible;
             /* border-top: 5px solid black; */
         }
 
@@ -212,6 +246,9 @@
     <div class="left-side">
         <img class="fone" src="{{ asset('images/banners/хит продукт.png') }}" alt="Фон">
         <div class="left-side-bottom">
+            <div class="basket-icon">
+                <img src="{{ asset('assets/images/корзина1.svg') }}" alt="Корзина">
+            </div>
             <img src="{{ asset('images/banners/хит.png') }}" alt="Хит-продукт нижняя часть">
         </div>
     </div>

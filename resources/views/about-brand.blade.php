@@ -44,7 +44,7 @@
             flex-direction: column;
             justify-content: space-between;
             border-right: 5px solid black;
-            overflow: hidden;
+            overflow: visible;
             height: auto;
         }
 
@@ -63,6 +63,8 @@
 
         .left-side-bottom {
             width: 100%;
+            position: relative;
+            overflow: visible;
             /* border-top: 5px solid black; */
         }
 
@@ -71,6 +73,39 @@
             width: 100%;
             height: auto;
             margin-bottom: 0; /* На всякий случай */
+        }
+
+
+        .basket-icon{
+            width: 400px;
+            height: 50px;
+            position: absolute;
+            left: 100%;
+            top: -250px;
+            transform: translateX(-50%);
+            z-index: 10;
+            border-radius: 50%;
+            >img{
+                width: 400px;
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 1980px) {
+            .basket-icon{
+                width: 200px;
+                top: -125px;
+                >img{
+                    width: 200px;
+                    height: 190px;
+                }
+            }
+        }
+
+        @media (max-width: 780px) {
+            .basket-icon{
+                display: none;
+            }
         }
 
 
@@ -212,6 +247,9 @@
         <img class="fone" src="{{ asset('images/banners/фон.png') }}" alt="Фон">
         <img class="animation-glaz" src="{{ asset('animations/glaz-2.svg') }}" alt="Глаз">
         <div class="left-side-bottom">
+            <div class = "basket-icon">
+                <img src="{{ asset('assets/images/корзина.svg') }}" alt="Корзина" >
+            </div>
             <img src="{{ asset('images/banners/хит-п.png') }}" alt="Хит-продукт нижняя часть">
         </div>
     </div>

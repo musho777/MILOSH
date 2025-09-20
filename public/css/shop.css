@@ -53,20 +53,66 @@ a {
 }
 
 .product-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 0; /* Без отступов */
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 .product-box {
-    width: 100%;
-    height: 300px; /* можешь менять по желанию */
+    flex: 1 1 0; /* Equal distribution - all items grow equally */
+    min-width: 150px; /* Minimum width to prevent too small boxes */
+    height: 300px; /* Original height */
     box-sizing: border-box;
     margin: 0;
     text-align: center;
     padding: 0;
     border: 1px solid black; /* для наглядности, можно убрать */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (min-width: 1980px) {
+    .product-box {
+        min-width: 300px;
+        height: 300px; /* Keep original height */
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1979px) {
+    .product-box {
+        min-width: 250px;
+        height: 300px; /* Keep original height */
+    }
+}
+
+@media (max-width: 1399px) {
+    .product-box {
+        min-width: 200px;
+        height: 300px; /* Keep original height */
+    }
+}
+
+@media (max-width: 980px) {
+    .product-box {
+        min-width: 150px;
+        height: 300px; /* Keep original height */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-row {
+        flex-direction: column;
+    }
+    .product-box {
+        width: 100vw;
+        min-width: unset;
+        height: 300px; /* Keep original height */
+    }
 }
 
 .product-sidebar {
