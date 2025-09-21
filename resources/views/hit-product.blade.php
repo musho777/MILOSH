@@ -46,6 +46,13 @@
         flex: 1; /* 50% ширины каждый */
     }
 
+
+    @media (max-width: 1600px) {
+    .left-side {
+        height: auto;
+    }
+}
+
     .left-side{
         border-right: 5px solid black;
     }
@@ -86,7 +93,7 @@
 
     .bottom-section > div {
         flex: 1;
-        height: 300px;
+        height: 491px;
         border: 5px solid black;
         border-top: 0;
         border-right: 0;
