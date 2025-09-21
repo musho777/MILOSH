@@ -72,8 +72,8 @@
 
         @media (max-width: 768px) {
             .alisa-first-section {
-                flex-direction: column;
-                height: auto;
+                flex-direction: column-reverse;
+                height: 1000px;
             }
 
             .alisa-first-section > div {
@@ -89,6 +89,10 @@
             .alisa-first-section .right-div {
                 border-left: 3px solid black;
                 border-top: 1.5px solid black;
+                background-image: url('{{ asset('assets/images/меню.png') }}');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
 
             .alisa-second-section {
