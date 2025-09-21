@@ -294,7 +294,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check">✔</button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -318,7 +318,15 @@
     document.addEventListener('DOMContentLoaded', function () {
         const chatBody = document.querySelector('.chat-body');
         const closeBtn = document.querySelector('.close');
+        const checkBtn = document.querySelector('.check');
         const chatContainer = document.getElementById('chatWidget'); // сам контейнер чата
+
+        // Create minimized chat icon
+        const minimizedChat = document.createElement('div');
+        minimizedChat.className = 'minimized-chat';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.style.display = 'none';
+        document.body.appendChild(minimizedChat);
 
         // Скрыть чат по умолчанию
         chatContainer.style.display = 'none';
@@ -327,6 +335,18 @@
         setTimeout(() => {
             chatContainer.style.display = 'flex';
         }, 3000);
+
+        // Minimize chat functionality
+        checkBtn.addEventListener('click', function () {
+            chatContainer.style.display = 'none';
+            minimizedChat.style.display = 'block';
+        });
+
+        // Restore chat functionality
+        minimizedChat.addEventListener('click', function () {
+            minimizedChat.style.display = 'none';
+            chatContainer.style.display = 'flex';
+        });
 
         closeBtn.addEventListener('click', function () {
             const existingConfirm = document.querySelector('.chat-confirmation');
@@ -408,6 +428,7 @@
         border: none;
         font-size: 20px;
         cursor: pointer;
+        height: 20px;
     }
 
     .chat-body {
@@ -530,5 +551,29 @@
         position: absolute;
         top: 10px;
         right: 20px;
+    }
+
+    .minimized-chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .minimized-chat img {
+        width: 100px;
+        height: 100px;
+    }
+    .chat-controls{
+            align-items: center;
+    display: flex;
+    gap: 5px;
     }
 </style>
