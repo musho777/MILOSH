@@ -158,13 +158,96 @@
             font-weight: 700;
             vertical-align: middle;
             width: 663px;
-            font-family: Comfortaa;
+            font_family: Comfortaa;
             line-height: 150%;
             letter-spacing: -1.1%;
             padding-bottom:40px;
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
+        }
+
+        .search-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            z-index: 9999;
+            padding: 80px 40px 40px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        .search-container.active {
+            display: flex;
+        }
+
+        .search-input-wrapper {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .search-input-wrapper input {
+            border: none;
+            border-bottom: 2px solid black;
+            padding: 6px 10px;
+            width: 300px;
+            outline: none;
+        }
+
+        .search-left {
+            flex: 0 0 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        .search-right {
+            flex: 1;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 20px;
+        }
+
+        .product-box {
+            border: 2px solid black;
+            height: 280px;
+        }
+
+        .search-button {
+            background: black;
+            color: white;
+            padding: 8px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .search-left a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .close-sidebar {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 20px;
         }
 
         /* Responsive styles to fix UI crash */
@@ -250,6 +333,54 @@
 <body>
 @include('layouts.header')
 
+<!-- Контейнер поиска -->
+<div class="search-container" id="searchContainer">
+    <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
+    <!-- Поле ввода -->
+    <div class="search-input-wrapper">
+        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <input type="text" placeholder="введите название или артикул">
+    </div>
+
+    <!-- Левая колонка -->
+    <div class="search-left">
+        <strong>ИСТОРИЯ ПОИСКА</strong>
+        <span>сумка</span>
+        <a href="">
+            <div>НОВОЕ</div>
+        </a>
+        <a href="">
+            <div>ХИТ-ПРОДУКТ</div>
+        </a>
+        <a href="">
+            <div>СУМКИ</div>
+        </a>
+        <a href="">
+            <div>ОДЕЖДА</div>
+        </a>
+        <a href="">
+            <div>АКСЕССУАРЫ</div>
+        </a>
+        <a href="">
+            <div>СКИДКИ И АКЦИИ</div>
+        </a>
+        <a href="">
+            <div>КЛИЕНТСКИЙ СЕРВИС</div>
+        </a>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="search-right">
+        <div class="product-grid">
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+        </div>
+        <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
+    </div>
+</div>
+
 <div class="hit-product-container">
     <div class="left-side">
         <img class="fone" src="{{ asset('images/banners/хит продукт.png') }}" alt="Фон">
@@ -303,6 +434,21 @@
 
 </div>
 @include('layouts.footer')
+
+<script>
+    const openSearch = document.getElementById('openSearch');
+    const searchContainer = document.getElementById('searchContainer');
+    const closeSearch = document.getElementById('closeSearchSidebar'); // Кнопка закрытия
+
+    openSearch.addEventListener('click', () => {
+        searchContainer.classList.add('active');
+    });
+
+    closeSearch.addEventListener('click', () => {
+        searchContainer.classList.remove('active');
+    });
+</script>
+
 </body>
 </html>
 <script>

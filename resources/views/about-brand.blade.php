@@ -430,6 +430,54 @@
 <body>
 @include('layouts.header')
 
+<!-- Контейнер поиска -->
+<div class="search-container" id="searchContainer">
+    <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
+    <!-- Поле ввода -->
+    <div class="search-input-wrapper">
+        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <input type="text" placeholder="введите название или артикул">
+    </div>
+
+    <!-- Левая колонка -->
+    <div class="search-left">
+        <strong>ИСТОРИЯ ПОИСКА</strong>
+        <span>сумка</span>
+        <a href="">
+            <div>НОВОЕ</div>
+        </a>
+        <a href="">
+            <div>ХИТ-ПРОДУКТ</div>
+        </a>
+        <a href="">
+            <div>СУМКИ</div>
+        </a>
+        <a href="">
+            <div>ОДЕЖДА</div>
+        </a>
+        <a href="">
+            <div>АКСЕССУАРЫ</div>
+        </a>
+        <a href="">
+            <div>СКИДКИ И АКЦИИ</div>
+        </a>
+        <a href="">
+            <div>КЛИЕНТСКИЙ СЕРВИС</div>
+        </a>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="search-right">
+        <div class="product-grid">
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+        </div>
+        <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
+    </div>
+</div>
+
 <div class="hit-product-container">
     <div class="left-side">
         <div class="left-side-div">
@@ -540,6 +588,20 @@
                 chatContainer.style.display = 'none';
             });
         });
+    });
+</script>
+
+<script>
+    const openSearch = document.getElementById('openSearch');
+    const searchContainer = document.getElementById('searchContainer');
+    const closeSearch = document.getElementById('closeSearchSidebar'); // Кнопка закрытия
+
+    openSearch.addEventListener('click', () => {
+        searchContainer.classList.add('active');
+    });
+
+    closeSearch.addEventListener('click', () => {
+        searchContainer.classList.remove('active');
     });
 </script>
 
