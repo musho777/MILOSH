@@ -56,9 +56,12 @@
 
         .animation-glaz {
             position: absolute;
-            width: 98.7%;
-            height: auto;
+            width: 100%;
             z-index: 1;
+            top:0;
+            height: 100%;
+            object-fit: cover;
+            padding-right:40px;
         }
 
         .left-side-bottom {
@@ -417,7 +420,11 @@
     display: flex;
     gap: 5px;
     }
-
+    .left-side-div{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
     </style>
 </head>
 <body>
@@ -425,8 +432,10 @@
 
 <div class="hit-product-container">
     <div class="left-side">
-        <img class="fone" src="{{ asset('images/banners/фон.png') }}" alt="Фон">
-        <img class="animation-glaz" src="{{ asset('animations/glaz-2.svg') }}" alt="Глаз">
+        <div class="left-side-div">
+            <img class="fone" src="{{ asset('images/banners/фон.png') }}" alt="Фон">
+            <img class="animation-glaz" src="{{ asset('animations/glaz-2.svg') }}" alt="Глаз">
+        </div>
         <div class="left-side-bottom">
             <div class = "basket-icon">
                 <img src="{{ asset('assets/images/корзина4.svg') }}" alt="Корзина" >
