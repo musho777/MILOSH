@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="{{asset('css/cart.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -60,10 +62,6 @@
         <div class="cart-box">Товар 6</div>
         <div class="cart-box">Товар 7</div>
         <div class="cart-box">Товар 8</div>
-    </div>
-
-    <div class="footer-text">
-        текст
     </div>
 </div>
  <div class="chat-widget" id="chatWidget">
