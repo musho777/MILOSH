@@ -12,6 +12,7 @@
 @include('layouts.header')
 <!-- Контейнер поиска -->
 <div class="search-container" id="searchContainer">
+  
     <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
     <!-- Поле ввода -->
     <div class="search-input-wrapper">
@@ -58,6 +59,9 @@
     </div>
 </div>
 <div class="shop-container">
+      <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
     <div class="shop-banner">
         <img class="shop-image" style="width: 50%" src="{{ asset('images/banners/Group 79.png') }}" alt="Subtract">
         <p class="description">
@@ -277,6 +281,17 @@
         align-items: center;
         display: flex;
         gap: 5px;
+    }
+    .back-button{
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        top:100px;
+        left: 40px;
+        >img{
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .search-container {
