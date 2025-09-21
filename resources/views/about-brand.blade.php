@@ -425,6 +425,17 @@
         width: 100%;
         position: relative;
     }
+    .back-button{
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        top:100px;
+        left: 40px;
+    }
+    .back-button img{
+        width: 100%;
+        height: 100%;
+    }
     </style>
 </head>
 <body>
@@ -476,6 +487,9 @@
         </div>
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
+</div>
+<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
 </div>
 
 <div class="hit-product-container">

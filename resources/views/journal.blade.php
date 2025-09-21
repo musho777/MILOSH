@@ -54,6 +54,9 @@
             <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
         </div>
     </div>
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
     <style>
         html, body {
             height: 100%;
@@ -83,6 +86,17 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: white;
+        }
+        .back-button{
+            position: absolute;
+            width: 61px;
+            height: 61px;
+            top:100px;
+            left: 40px;
+        }
+        .back-button img{
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>

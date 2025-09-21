@@ -100,9 +100,23 @@
         .auth-right form {
             max-width: 300px;
         }
+        .back-button{
+            position: absolute;
+            width: 61px;
+            height: 61px;
+            top:100px;
+            left: 40px;
+        }
+        .back-button img{
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
+<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+</div>
 
 <div class="auth-wrapper">
     <!-- Левая сторона -->

@@ -56,6 +56,9 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
+<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+</div>
 <div class="contact-container">
     <div class="contact">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 536.841 1083.8" width="536.840820" height="600" fill="none" customFrame="#000000">
@@ -259,6 +262,17 @@ document.addEventListener('DOMContentLoaded', function() {
     .contact-img {
         max-height: 80vh;
         width: auto;
+    }
+    .back-button{
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        top:100px;
+        left: 40px;
+    }
+    .back-button img{
+        width: 100%;
+        height: 100%;
     }
 </style>
  <div class="chat-widget" id="chatWidget">

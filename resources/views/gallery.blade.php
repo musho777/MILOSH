@@ -57,6 +57,9 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
+<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+</div>
 <div class="shop-container">
     <div class="shop-banner">
         <img class="shop-image" style="width: 50%" src="{{ asset('images/banners/галерея.png') }}" alt="Subtract">
@@ -156,6 +159,17 @@
         width: 59.3px;
     }
 
+    .back-button{
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        top:100px;
+        left: 40px;
+    }
+    .back-button img{
+        width: 100%;
+        height: 100%;
+    }
 
 
 </style>
