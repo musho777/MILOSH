@@ -50,25 +50,128 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click functionality for КОНТАКТЫ and РЕКВИЗИТЫ
     const contactsElement = document.getElementById('КОНТАКТЫ');
     const requisitesElement = document.getElementById('РЕКВИЗИТЫ');
+    
+    // Create underline elements
+    let contactsUnderline = null;
+    let requisitesUnderline = null;
+    
+    // Function to update highlighting
+    function updateHighlighting() {
+        const currentUrl = window.location.href;
+        const isRequisitesPage = currentUrl.includes('/contact#');
+        
+        // Remove existing underlines
+        if (contactsUnderline) {
+            contactsUnderline.remove();
+            contactsUnderline = null;
+        }
+        if (requisitesUnderline) {
+            requisitesUnderline.remove();
+            requisitesUnderline = null;
+        }
+        
+        // Reset styles
+        if (contactsElement) {
+            contactsElement.style.fill = 'rgb(0,0,0)'; // Default black
+            contactsElement.style.fontWeight = 'normal';
+        }
+        if (requisitesElement) {
+            requisitesElement.style.fill = 'rgb(0,0,0)'; // Default black
+            requisitesElement.style.fontWeight = 'normal';
+        }
+        
+        // Apply highlighting styles with underline
+        if (isRequisitesPage && requisitesElement) {
+            requisitesElement.style.fontWeight = 'bold';
+            // Create underline for РЕКВИЗИТЫ
+            const bbox = requisitesElement.getBBox();
+            requisitesUnderline = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            requisitesUnderline.setAttribute('x1', bbox.x);
+            requisitesUnderline.setAttribute('y1', bbox.y + bbox.height + 2);
+            requisitesUnderline.setAttribute('x2', bbox.x + bbox.width);
+            requisitesUnderline.setAttribute('y2', bbox.y + bbox.height + 2);
+            requisitesUnderline.setAttribute('stroke', 'black');
+            requisitesUnderline.setAttribute('stroke-width', '2');
+            requisitesElement.parentElement.appendChild(requisitesUnderline);
+        } else if (!isRequisitesPage && contactsElement) {
+            contactsElement.style.fontWeight = 'bold';
+            // Create underline for КОНТАКТЫ
+            const bbox = contactsElement.getBBox();
+            contactsUnderline = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            contactsUnderline.setAttribute('x1', bbox.x);
+            contactsUnderline.setAttribute('y1', bbox.y + bbox.height + 2);
+            contactsUnderline.setAttribute('x2', bbox.x + bbox.width);
+            contactsUnderline.setAttribute('y2', bbox.y + bbox.height + 2);
+            contactsUnderline.setAttribute('stroke', 'black');
+            contactsUnderline.setAttribute('stroke-width', '2');
+            contactsElement.parentElement.appendChild(contactsUnderline);
+        }
+    }
+    
+    // Initial highlighting
+    updateHighlighting();
 
     if (contactsElement) {
         contactsElement.style.cursor = 'pointer';
-        contactsElement.addEventListener('click', function() {
+        // Add padding for easier clicking
+        const contactsParent = contactsElement.parentElement;
+        if (contactsParent && contactsParent.tagName === 'g') {
+            contactsParent.style.pointerEvents = 'bounding-box';
+        }
+        
+        // Create invisible clickable area
+        const contactsClickArea = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        contactsClickArea.setAttribute('x', '80');
+        contactsClickArea.setAttribute('y', '370');
+        contactsClickArea.setAttribute('width', '150');
+        contactsClickArea.setAttribute('height', '30');
+        contactsClickArea.setAttribute('fill', 'transparent');
+        contactsClickArea.style.cursor = 'pointer';
+        contactsElement.parentElement.insertBefore(contactsClickArea, contactsElement);
+        
+        const handleContactClick = function() {
+            // Update URL without page reload
+            window.history.pushState({}, '', '/contact');
+            updateHighlighting();
+            
             // Scroll to contacts section or perform desired action
             const contactSection = document.querySelector('.contact-section');
             if (contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
-        });
+        };
+        
+        contactsElement.addEventListener('click', handleContactClick);
+        contactsClickArea.addEventListener('click', handleContactClick);
     }
 
     if (requisitesElement) {
         requisitesElement.style.cursor = 'pointer';
-        requisitesElement.addEventListener('click', function() {
-            // Navigate to /contact#
-            window.location.href = '/contact#';
-        });
+        
+        // Create invisible clickable area
+        const requisitesClickArea = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        requisitesClickArea.setAttribute('x', '280');
+        requisitesClickArea.setAttribute('y', '370');
+        requisitesClickArea.setAttribute('width', '170');
+        requisitesClickArea.setAttribute('height', '30');
+        requisitesClickArea.setAttribute('fill', 'transparent');
+        requisitesClickArea.style.cursor = 'pointer';
+        requisitesElement.parentElement.insertBefore(requisitesClickArea, requisitesElement);
+        
+        const handleRequisitesClick = function() {
+            // Update URL without page reload
+            window.history.pushState({}, '', '/contact#');
+            updateHighlighting();
+        };
+        
+        requisitesElement.addEventListener('click', handleRequisitesClick);
+        requisitesClickArea.addEventListener('click', handleRequisitesClick);
     }
+    
+    // Listen for browser back/forward buttons
+    window.addEventListener('popstate', function() {
+        updateHighlighting();
+    });
 });
 </script>
 </g>
