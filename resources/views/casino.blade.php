@@ -17,10 +17,15 @@
         <div class="animation-zone">
             <img class="right-side-img" src="{{ asset('animations/m2-2b.svg') }}" alt="Зелёная зона">
         </div>
+         <div class="basket-icon">
+                <img src="{{ asset('assets/images/корзина1.svg') }}" alt="Корзина">
+            </div>
         <div class="right-bottom">
             <div class="text-zone">
                 <h3>КАЗИНО</h3>
                 <p>Текст</p>
+            </div>
+           
             </div>
         </div>
     </div>
@@ -35,7 +40,7 @@
     .casino-container {
         display: flex;
         width: 100%;
-        height: 1000px;
+        height: 100%;
     }
 
     .left-side,
@@ -49,7 +54,7 @@
     }
 
     .left-side img {
-        height: 1000px;      /* растягивает изображение по высоте */
+        height: 100%;      /* растягивает изображение по высоте */
         width: 100%;
         object-fit: cover; 
         display: block;
@@ -61,11 +66,19 @@
         flex-direction: column;
         height: 100%;
         background-color: #D2F8A9;
+        position: relative;
     }
 
     .right-side img {
         width: 104%;
         margin-left:-30px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .basket-icon img{
+          width: 100%;
+        margin-left:-200px;
         object-fit: cover;
         display: block;
     }
@@ -82,6 +95,7 @@
         height: 50%; /* точно половина высоты, как и animation-zone */
         position: relative;
         z-index: 2;
+        overflow: visible;
     }
 
     .text-zone {
@@ -101,35 +115,53 @@
         font-size: 11.7px;
     }
 
+    .basket-icon{
+        width: 400px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     .basket-icon{
+            width: 200px;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+        }
+        
+        .basket-icon img{
+            width: 200px;
+            height: 190px;
+        }
+    
+    /* .basket-icon img{
+        width: 400px;
+        height: 380px;
+    } */
+
     /* Desktop responsive breakpoints */
-    @media (min-width: 1980px) {
-        .casino-container {
-            height: 1000px;
+    @media (max-width: 2280px) {
+        .basket-icon{
+            width: 200px;
+            bottom: 100px;
+            left: 0;
+            right: 0;
         }
-
-        .animation-zone {
-        }
-
-        .right-bottom {
-            height: 50%;
-        }
-
-        .text-zone {
-            padding: 50px 100px;
-        }
-
-        .text-zone h3 {
-            font-size: 40px;
-        }
-
-        .text-zone p {
-            font-size: 16px;
+        
+        .basket-icon img{
+            width: 200px;
+            height: 190px;
         }
     }
 
     @media (min-width: 1920px) and (max-width: 1979px) {
         .casino-container {
-            height: 1000px;
+            height: 100%;
         }
 
         .animation-zone {
@@ -154,7 +186,7 @@
 
     @media (min-width: 1366px) and (max-width: 1919px) {
         .casino-container {
-            height: 1000px;
+            height: 100%;
         }
 
         .animation-zone {
@@ -196,6 +228,7 @@
             border-top: 0;
             height: auto;
             width: 100%;
+            position: relative;
         }
 
         .text-zone {
@@ -204,6 +237,18 @@
 
         .text-zone h3 {
             font-size: 24px;
+        }
+        
+        .basket-icon{
+            width: 180px;
+            bottom: 90px;
+            left: 0;
+            right: 0;
+        }
+        
+        .basket-icon img{
+            width: 180px;
+            height: 171px;
         }
     }
       @media (max-width: 768px) {
@@ -269,6 +314,18 @@
 
         .text-zone p {
             font-size: 10px;
+        }
+
+        .basket-icon{
+            width: 150px;
+            bottom: 80px;
+            left: 0;
+            right: 0;
+        }
+        
+        .basket-icon img{
+            width: 150px;
+            height: 143px;
         }
     }
 

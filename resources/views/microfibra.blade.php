@@ -41,27 +41,38 @@
         flex: 1; /* 50% ширины каждый */
     }
 
+
+    @media (max-width: 1600px) {
+    .left-side {
+        height: auto;
+    }
+}
+
     .left-side{
         border-right: 5px solid black;
     }
 
-    /* Правая часть */
-    .green-zone {
-        height: 116px;
-    }
+
     .green-zone img{
-        width: 100%;
+       display: block;
+       width: 100%;
+    }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     .text-zone {
-        width: 100%;
-        height: 86%;
-        margin-top: -21px;
+        flex: 1; /* займет всё оставшееся место */
+        margin-top: 0;
         padding: 30px 20px;
         border-top: 5px solid black;
         color: #00A438;
-        background-color: #D9D9D9;
+        background-color: rgba(217, 217, 217, 1);
     }
+
 
     .image-zone img.product-image {
         max-width: 100%;
@@ -77,8 +88,7 @@
 
     .bottom-section > div {
         flex: 1;
-        height: 300px;
-        background-color: #f2f2f2;
+        height: 491px;
         border: 5px solid black;
         border-top: 0;
         border-right: 0;
