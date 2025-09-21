@@ -303,10 +303,9 @@ main,
 
 .left-block .alisa {
     position: absolute;
-    top: 15px; /* Отрегулируй вертикальное положение */
     left: 150px; /* Отрегулируй горизонтальное положение */
-    width: 100px; /* Задай нужный размер */
-    height: auto;
+    width: auto;
+    height: 90%;
     z-index: 2;
 }
 
@@ -1244,7 +1243,7 @@ main,
         height: 300px;
     }
     .right-side {
-        height: 800px;
+        height: 850px;
     }
     .left-side {
         height: 850px;
@@ -1339,6 +1338,12 @@ main,
     .footer-middle__text {
         font-size: 70px;
         letter-spacing: 0;
+    }
+}
+
+@media (max-width: 794px) {
+    .container2 {
+        height: 500px;
     }
 }
 
@@ -1595,5 +1600,24 @@ body.locked {
     #chatWidget,
     #searchContainer {
         position: fixed !important;
+    }
+}
+
+@media (min-width: 1989px) {
+    .right-side,
+    .left-side {
+        height: max-content;
+    }
+}
+
+@media (min-width: 2000px) {
+    .split-50 {
+        height: 870px;
+    }
+    .right-block .subtract-img {
+        width: 280px;
+    }
+    .right-block .text-overlay {
+        width: 180px;
     }
 }

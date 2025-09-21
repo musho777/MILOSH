@@ -85,9 +85,9 @@
                     <img class="subtract-img" src="{{ asset('images/banners/Subtract.png') }}" alt="Subtract">
                     <img class="text-overlay" src="{{ asset('images/banners/о бренде.png') }}" alt="О бренде">
                 </div>
-                 <div class="image-wrapper">
+                 <a  href="{{ route('showAboutBrandPage') }}" class="image-wrapper">
                      <img class="main-img" src="{{ asset('animations/003-2a.svg') }}" alt="Right Split">
-                 </div>
+                </a>
             </div>
 
         </div>
@@ -395,7 +395,9 @@
 </script>
 
 <style>
-
+    .bg-subtract:hover {
+        cursor: url('/assets/images/Group 74.svg'), auto;
+    }
     .chat-widget {
         width: 450px;
         height: 600px;
