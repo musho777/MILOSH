@@ -1215,16 +1215,16 @@ main,
     .footer-middle__logo .container {
         padding: 0 30px;
     }
-    .logo_img {
+    /* .logo_img {
         width: 180px;
         height: 29px;
-    }
+    } */
     .nav__dropdown li {
         font-size: 18px;
     }
     .nav__icons img {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
     }
     .banner__text {
         font-size: 140px;
