@@ -12,7 +12,7 @@
 <section class="certificates">
     <h2 class="cert-title">СЕРТИФИКАТЫ</h2>
 
-    <img src="{{ asset('images/banners/_Слой_1.svg') }}" alt="Сертификаты" class="cert-image">
+    <img src="{{ asset('animations/rama_.svg') }}" alt="Сертификаты" class="cert-image">
 
     <div class="cert-descriptions">
         <p>Регистрационный номер декларации о соответствии<br>
@@ -41,9 +41,8 @@
     }
 
     .cert-image {
-        max-width: 63%;
+        max-width: 100%;
         height: auto;
-        margin-bottom: 30px;
     }
 
     .cert-descriptions {

@@ -217,7 +217,7 @@
                     <li><a href="">MILOSH POLICY</a></li>
                 </ul>
             </div>
-            <div>
+            <div id="contact">
                 <h4>КОНТАКТЫ</h4>
                 <div  class = "contactDiv">
                     <p>Телефон Call-Центра: +7 800 770 05 93</p>

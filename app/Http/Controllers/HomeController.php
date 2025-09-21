@@ -19,6 +19,11 @@ class HomeController extends Controller
         return view('contact');
     }
 
+    public function showRekvizitPage()
+    {
+        return view('contact', ['showRekvizit' => true]);
+    }
+
     public function showHitProductPage()
     {
         return view('hit-product');

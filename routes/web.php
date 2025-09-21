@@ -19,6 +19,7 @@ Route::get('/catalog/{category?}', [CatalogController::class, 'showCatalogPage']
 Route::get('/gallery', [CatalogController::class, 'showGalleryPage'])->name('showGalleryPage');
 Route::get('/cart', [CatalogController::class, 'showCartPage'])->name('showCartPage');
 Route::get('/contact', [HomeController::class, 'showContactPage'])->name('showContactPage');
+Route::get('/contact/rekvizit', [HomeController::class, 'showRekvizitPage'])->name('showRekvizitPage');
 Route::get('/hit-product', [HomeController::class, 'showHitProductPage'])->name('showHitProductPage');
 Route::get('/about-brand', [HomeController::class, 'showAboutBrandPage'])->name('showAboutBrandPage');
 Route::get('/casino', [HomeController::class, 'showCasinoPage'])->name('showCasinoPage');

@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to update highlighting
     function updateHighlighting() {
         const currentUrl = window.location.href;
-        const isRequisitesPage = currentUrl.includes('/contact#');
+        const isRequisitesPage = currentUrl.includes('/contact#') || currentUrl.includes('/contact/rekvizit');
         
         // Remove existing underlines
         if (contactsUnderline) {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const handleRequisitesClick = function() {
             // Update URL without page reload
-            window.history.pushState({}, '', '/contact#');
+            window.history.pushState({}, '', '/contact/rekvizit');
             updateHighlighting();
         };
         

@@ -22,7 +22,7 @@
                             <a href="{{route('showShopPage')}}"><b>Контакты</b></a>
                             <ul class="nav__dropdown">
                                 <li><a href="{{route('showContactPage')}}">КОНТАКТЫ</a></li>
-                                <li><a href="#">РЕКВИЗИТЫ</a></li>
+                                <li><a href="{{route('showRekvizitPage')}}">РЕКВИЗИТЫ</a></li>
                             </ul>
                         </li>
                         <li class="nav__item nav__item--has-dropdown">
@@ -71,7 +71,7 @@
             <a href="{{route('showShopPage')}}">Контакты</a>
             <ul class="mobile-menu__dropdown">
                 <li><a href="{{route('showContactPage')}}">КОНТАКТЫ</a></li>
-                <li><a href="#">РЕКВИЗИТЫ</a></li>
+                <li><a href="{{route('showRekvizitPage')}}">РЕКВИЗИТЫ</a></li>
             </ul>
         </li>
         <li class="mobile-menu__item--has-dropdown">
