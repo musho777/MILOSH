@@ -248,7 +248,7 @@
         <img class="animation-glaz" src="{{ asset('animations/glaz-2.svg') }}" alt="Глаз">
         <div class="left-side-bottom">
             <div class = "basket-icon">
-                <img src="{{ asset('assets/images/корзина.svg') }}" alt="Корзина" >
+                <img src="{{ asset('assets/images/корзина4.svg') }}" alt="Корзина" >
             </div>
             <img src="{{ asset('images/banners/хит-п.png') }}" alt="Хит-продукт нижняя часть">
         </div>

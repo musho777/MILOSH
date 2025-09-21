@@ -18,7 +18,7 @@
             <img class="right-side-img" src="{{ asset('animations/m2-2b.svg') }}" alt="Зелёная зона">
         </div>
          <div class="basket-icon">
-                <img src="{{ asset('assets/images/корзина1.svg') }}" alt="Корзина">
+                <img src="{{ asset('assets/images/корзина5.svg') }}" alt="Корзина">
             </div>
         <div class="right-bottom">
             <div class="text-zone">
@@ -40,7 +40,24 @@
     .casino-container {
         display: flex;
         width: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+
+    .center-image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        width: 200px;
+        height: 200px;
+    }
+
+    .center-image img {
+        width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
     .left-side,
@@ -71,7 +88,7 @@
 
     .right-side img {
         width: 104%;
-        margin-left:-30px;
+        margin-left:-12px;
         object-fit: cover;
         display: block;
     }
@@ -186,7 +203,7 @@
 
     @media (min-width: 1366px) and (max-width: 1919px) {
         .casino-container {
-            height: 100%;
+            min-height: 100%;
         }
 
         .animation-zone {
@@ -211,6 +228,14 @@
 
     /* Responsive breakpoints for mobile */
     @media (max-width: 870px) {
+        .basket-icon{
+            display:none
+        }
+        
+        .center-image {
+            width: 150px;
+            height: 150px;
+        }
         .casino-container {
                 flex-direction: column-reverse;
            
@@ -252,6 +277,14 @@
         }
     }
       @media (max-width: 768px) {
+        .basket-icon{
+            display:none
+        }
+        
+        .center-image {
+            width: 120px;
+            height: 120px;
+        }
             .casino-container {
                 flex-direction: column-reverse;
                 height: auto;

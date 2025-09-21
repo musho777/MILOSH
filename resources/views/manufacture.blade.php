@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <style>
 
+        .body{
+            
+        }
         .hit-product-container {
             display: flex;
             width: 100%;
@@ -26,6 +29,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .right-side div{
+            width: 100%;
         }
 
 
@@ -96,6 +102,7 @@
         .left-side-bottom {
               position: relative;
             overflow: visible;
+            width: 100%;
             /* border-top: 5px solid black; */
         }
 
@@ -104,6 +111,7 @@
             width: 100%;
             height: auto;
             margin-bottom: 0; /* На всякий случай */
+            
         }
 
 

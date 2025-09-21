@@ -12,7 +12,7 @@
     <div class="left-side">
 
     </div>
-    <img class="center-image" src="{{ asset('images/banners/корзина (1).png') }}" alt="Зелёная зона">
+    <img class="center-image" src="{{ asset('assets/images/корзина5.svg') }}" alt="Корзина">
     <div class="right-side">
 
     </div>
@@ -23,11 +23,11 @@
     <div></div>
     <div style="border-right: 5px solid black!important;"></div>
 </div>
-<style>
+<!-- <style>
     .hit-product-container {
         display: flex;
         width: 100%;
-        height: 90vh; /* верхняя часть экрана — половина высоты */
+        height: 90vh; 
         border: 5px solid black;
         position: relative;
     }
@@ -86,6 +86,96 @@
         flex: 1;
         height: 300px;
         background-color: #f2f2f2;
+        border: 5px solid black;
+        border-top: 0;
+        border-right: 0;
+
+    }
+</style> -->
+
+<style>
+    .hit-product-container {
+        display: flex;
+        width: 100%;
+        height: 90vh; /* верхняя часть экрана — половина высоты */
+        border: 5px solid black;
+        position: relative;
+    }
+
+    .center-image {
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 200px;
+        height: 200px;
+    }
+    .left-side,
+    .right-side {
+        flex: 1; /* 50% ширины каждый */
+    }
+
+
+    @media (max-width: 1600px) {
+    .left-side {
+        height: auto;
+    }
+    
+    .center-image {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .center-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+    .left-side{
+        border-right: 5px solid black;
+    }
+
+
+    .green-zone img{
+       display: block;
+       width: 100%;
+    }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .text-zone {
+        flex: 1; /* займет всё оставшееся место */
+        margin-top: 0;
+        padding: 30px 20px;
+        border-top: 5px solid black;
+        color: #00A438;
+        background-color: #F3DFE9;
+    }
+
+
+    .image-zone img.product-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+    }
+
+    /* Нижняя секция */
+    .bottom-section {
+        display: flex;
+    }
+
+    .bottom-section > div {
+        flex: 1;
+        height: 491px;
         border: 5px solid black;
         border-top: 0;
         border-right: 0;
