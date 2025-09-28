@@ -74,14 +74,7 @@
     <div style="border-right: 5px solid black!important;"></div>
 </div>
 <!-- <style>
-    .hit-product-container {
-        display: flex;
-        width: 100%;
-        height: 90vh; 
-        border: 5px solid black;
-        position: relative;
-    }
-
+ 
     .center-image {
         position: absolute;
         top: 98%;              /* по вертикали */
@@ -147,10 +140,11 @@
     .hit-product-container {
         display: flex;
         width: 100%;
-        height: 90vh; /* верхняя часть экрана — половина высоты */
+        height: 90vh;
         border: 5px solid black;
         position: relative;
     }
+
 
     .center-image {
         position: absolute;
@@ -167,6 +161,9 @@
     }
 
 
+
+
+ 
     @media (max-width: 1600px) {
     .left-side {
         height: auto;
@@ -177,6 +174,11 @@
         height: 180px;
     }
 }
+   @media (max-width: 425px) {
+        .hit-product-container {
+            height: 300px !important;
+        }
+    }
 
 @media (max-width: 768px) {
     .center-image {

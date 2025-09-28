@@ -87,7 +87,6 @@
     .hit-product-container {
         display: flex;
         width: 100%;
-        height: 90vh; /* верхняя часть экрана — половина высоты */
         border: 2px solid black;
         position: relative;
     }
@@ -98,12 +97,22 @@
         border-width:3px 3px 3px 2.5px;
     }
 
-
+    @media (max-width: 425px){
+     .hit-product-container{
+            height: "40%";
+        }
+    }
+      @media (max-width:1440px){
+    .text-zone {
+        padding: 30px 40px !important;
+        padding-bottom: 100px !important;
+        }
+    }
     @media (max-width: 1600px) {
     .left-side {
         height: auto;
     }
-}
+    }
 
     .left-side{
         border-right:2.5px solid;
@@ -128,6 +137,8 @@
         border-top: 5px solid black;
         color: #00A438;
         background-color: #F3DFE9;
+        padding: 30px 140px;
+        padding-bottom: 150px;
     }
 
 
