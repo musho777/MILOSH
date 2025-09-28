@@ -151,7 +151,6 @@
         .text-zonep {
             font-size: 16px;
              color:#E5231E;
-            font-family: "Comfortaa";
             font-weight: 700;
             vertical-align: middle;
             width: 663px;

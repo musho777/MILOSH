@@ -118,6 +118,9 @@
         <div class="product-box">Сумка 8</div>
         <div class="product-box">Сумка 9</div>
         <div class="product-box">Сумка 10</div>
+        <div class="product-box">Сумка 11</div>
+        <div class="product-box">Сумка 12</div>
+
     </div>
 
     <div class="footer-text">
@@ -370,7 +373,7 @@
 
     .product-box {
         border: 2px solid black;
-        height: 280px;
+        height: 380px;
     }
 
     .search-button {

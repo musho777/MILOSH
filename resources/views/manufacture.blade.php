@@ -158,13 +158,10 @@
             font-weight: 700;
             vertical-align: middle;
             width: 663px;
-            font_family: Comfortaa;
+    
             line-height: 150%;
             letter-spacing: -1.1%;
             padding-bottom:40px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
         }
 
         .search-container {
