@@ -53,17 +53,16 @@ a {
 }
 
 .product-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
     width: 100vw;
     margin: 0;
     padding: 0;
 }
 
 .product-box {
-    flex: 1 1 0; /* Equal distribution - all items grow equally */
-    min-width: 150px; /* Minimum width to prevent too small boxes */
-    height: 300px; /* Original height */
+    height: 300px;
     box-sizing: border-box;
     margin: 0;
     text-align: center;
@@ -75,43 +74,14 @@ a {
     align-items: center;
 }
 
-/* Responsive adjustments for different screen sizes */
-@media (min-width: 1980px) {
-    .product-box {
-        min-width: 300px;
-        height: 300px; /* Keep original height */
-    }
-}
-
-@media (min-width: 1400px) and (max-width: 1979px) {
-    .product-box {
-        min-width: 250px;
-        height: 300px; /* Keep original height */
-    }
-}
-
-@media (max-width: 1399px) {
-    .product-box {
-        min-width: 200px;
-        height: 300px; /* Keep original height */
-    }
-}
-
-@media (max-width: 980px) {
-    .product-box {
-        min-width: 150px;
-        height: 300px; /* Keep original height */
-    }
-}
-
+/* Keep 5 columns on all screen sizes */
 @media (max-width: 768px) {
     .product-row {
-        flex-direction: column;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: auto; /* Allow horizontal scroll on small screens */
     }
     .product-box {
-        width: 100vw;
-        min-width: unset;
-        height: 300px; /* Keep original height */
+        min-width: 150px; /* Minimum width for each box on mobile */
     }
 }
 
@@ -259,11 +229,10 @@ a {
     border: 2px solid black;
 }
 
-/* Когда сайдбар активен — перестраиваем .product-row */
+/* Когда сайдбар активен — сохраняем 5 колонок */
 body.sidebar-open .product-row {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(5, 1fr);
     width: calc(100% - 668px);
     box-sizing: border-box;
 }

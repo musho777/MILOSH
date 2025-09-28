@@ -108,16 +108,16 @@
         <h1 style="margin-top: 30px">{{ $category }}</h1>
     </div>
     <div class="product-row">
-        <div class="product-box">Товар 1</div>
-        <div class="product-box">Товар 2</div>
-        <div class="product-box">Товар 3</div>
-        <div class="product-box">Товар 4</div>
-        <div class="product-box">Товар 5</div>
-        <div class="product-box">Товар 6</div>
-        <div class="product-box">Товар 7</div>
-        <div class="product-box">Товар 8</div>
-        <div class="product-box">Товар 9</div>
-        <div class="product-box">Товар 10</div>
+        <div class="product-box">Сумка 1</div>
+        <div class="product-box">Сумка 2</div>
+        <div class="product-box">Сумка 3</div>
+        <div class="product-box">Сумка 4</div>
+        <div class="product-box">Сумка 5</div>
+        <div class="product-box">Сумка 6</div>
+        <div class="product-box">Сумка 7</div>
+        <div class="product-box">Сумка 8</div>
+        <div class="product-box">Сумка 9</div>
+        <div class="product-box">Сумка 10</div>
     </div>
 
     <div class="footer-text">
