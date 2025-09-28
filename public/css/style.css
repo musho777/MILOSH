@@ -1026,6 +1026,7 @@ main,
     z-index: 99999999;
     min-width: 150px;
     text-align: center;
+    border: 1.5px solid black;
     /* Анимация */
     visibility: hidden;
     opacity: 0;
@@ -1078,7 +1079,11 @@ main,
 }
 
 .nav__dropdown li {
-    border: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+}
+
+.nav__dropdown li:last-child {
+    border-bottom: none;
 }
 
 /* Показываем подменю при наведении */
