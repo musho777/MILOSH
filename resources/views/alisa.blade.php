@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <style>
         .alisa-content {
-            min-height: 100vh;
+            min-height: 100%;
             background: white;
+            border:4px solid;
+            position: relative;
         }
 
         .alisa-content:hover {
@@ -26,12 +28,12 @@
 
         .center-image {
             position: absolute;
-            bottom: -60px;
+            bottom: -100px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 380px;
         }
 
         .alisa-first-section > div {
@@ -41,11 +43,11 @@
         }
 
         .alisa-first-section .left-div {
-            border-right: 1.5px solid black;
+            border-right: 4px solid black;
         }
 
         .alisa-first-section .right-div {
-            border-left: 1.5px solid black;
+            border-left: 4px solid black;
             background-image: url('{{ asset('assets/images/alisa-bg.png') }}');
             background-size: cover;
             background-position: center;
@@ -65,25 +67,25 @@
         }
 
         .alisa-second-section .border-div:nth-child(1) {
-            border-right: 1.5px solid black;
-            border-bottom: 1.5px solid black;
+            border-right: 4px solid black;
+            border-bottom: 4px solid black;
         }
 
         .alisa-second-section .border-div:nth-child(2) {
-            border-left: 1.5px solid black;
-            border-right: 1.5px solid black;
-            border-bottom: 1.5px solid black;
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+            border-bottom: 4px solid black;
         }
 
         .alisa-second-section .border-div:nth-child(3) {
-            border-left: 1.5px solid black;
-            border-right: 1.5px solid black;
-            border-bottom: 1.5px solid black;
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+            border-bottom: 4px solid black;
         }
 
         .alisa-second-section .border-div:nth-child(4) {
-            border-left: 1.5px solid black;
-            border-bottom: 1.5px solid black;
+            border-left: 4px solid black;
+            border-bottom: 4px solid black;
         }
 
         @media (max-width: 768px) {
@@ -93,6 +95,7 @@
             }
 
             .center-image {
+            bottom: -30px;
                 width: 120px;
                 height: 120px;
             }
@@ -103,18 +106,9 @@
             }
 
             .alisa-first-section .left-div {
-                border-right: 3px solid black;
-                border-bottom: 1.5px solid black;
+                border-right: 4px solid black;
+                border-bottom: 4px solid black;
             }
-
-            {{--.alisa-first-section .right-div {--}}
-            {{--    border-left: 3px solid black;--}}
-            {{--    border-top: 1.5px solid black;--}}
-            {{--    background-image: url('{{ asset('assets/images/меню.png') }}');--}}
-            {{--    background-size: cover;--}}
-            {{--    background-position: center;--}}
-            {{--    background-repeat: no-repeat;--}}
-            {{--}--}}
 
             .alisa-second-section {
                 grid-template-columns: repeat(2, 1fr);
@@ -127,31 +121,32 @@
             }
 
             .alisa-second-section .border-div:nth-child(1) {
-                border-right: 1.5px solid black;
-                border-bottom: 1.5px solid black;
+                border-right: 4px solid black;
+                border-bottom: 4px solid black;
             }
 
             .alisa-second-section .border-div:nth-child(2) {
-                border-left: 1.5px solid black;
-                border-bottom: 1.5px solid black;
+                border-left: 4px solid black;
+                border-bottom: 4px solid black;
             }
 
             .alisa-second-section .border-div:nth-child(3) {
-                border-right: 1.5px solid black;
-                border-top: 1.5px solid black;
+                border-right: 4px solid black;
+                border-top: 4px solid black;
             }
 
             .alisa-second-section .border-div:nth-child(4) {
-                border-left: 1.5px solid black;
-                border-top: 1.5px solid black;
+                border-left: 4px solid black;
+                border-top: 4px solid black;
             }
         }
     .back-button{
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top:40px;
         left: 40px;
+        z-index: 2;
     }
     .back-button img{
         width: 100%;
@@ -161,6 +156,7 @@
         @media (max-width: 1600px) {
 
             .center-image {
+                bottom:-60px;
                 width: 180px;
                 height: 180px;
             }
@@ -216,11 +212,12 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
+
 
 <div class="alisa-content">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+</div>
     <!-- First Section: 2 white divs side by side -->
     <section class="alisa-first-section">
         <div class="left-div"></div>
@@ -403,7 +400,7 @@
 
     .minimized-chat {
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         right: 20px;
         width: 120px;
         height: 120px;

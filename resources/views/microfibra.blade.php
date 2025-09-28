@@ -55,10 +55,11 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+
+<div class="hit-product-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
     <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
 </div>
-<div class="hit-product-container">
     <div class="left-side">
 
     </div>
@@ -90,34 +91,40 @@
 
     .center-image {
         position: absolute;
-        bottom: -60px;
+        bottom: -100px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 10;
-        width: 200px;
-        height: 200px;
+        width: 400px;
+        height: 380px;
     }
 
     .left-side,
     .right-side {
-        flex: 1; /* 50% ширины каждый */
+        flex: 1;
     }
 
+      .left-side{
+        border-right: 3px solid black;
+        width: 50%;
+        height: auto;
+        border-bottom:0;
+    }
 
+  
     @media (max-width: 1600px) {
     .left-side {
         height: auto;
     }
 
         .center-image {
+        bottom: -60px;
             width: 180px;
             height: 180px;
         }
 }
 
-    .left-side{
-        border-right: 5px solid black;
-    }
+    
 
 
     .green-zone img{
@@ -129,6 +136,8 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        border-top:0px;
+        border-bottom:0px;
     }
 
     .text-zone {
@@ -150,13 +159,14 @@
 
     /* Нижняя секция */
     .bottom-section {
+        border-top:1px solid;
         display: flex;
     }
 
     .bottom-section > div {
         flex: 1;
         height: 491px;
-        border: 5px solid black;
+        border: 6px solid black;
         border-top: 0;
         border-right: 0;
 
@@ -165,7 +175,7 @@
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top:40px;
         left: 40px;
     }
     .back-button img{
