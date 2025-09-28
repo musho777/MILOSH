@@ -10,10 +10,11 @@
 </head>
 <body>
 @include('layouts.header')
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+
+<div class="shop-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
     <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
 </div>
-<div class="shop-container">
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
             <span>ДОБАВЛЕНО В КОРЗИНУ (1)</span>
@@ -236,6 +237,9 @@
         border-top: 2px solid black;
         gap: 10px;
     }
+    .shop-container{
+        position: relative;
+    }
 
     .chat-controls button {
         background: none;
@@ -310,7 +314,7 @@
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top:40px;
         left: 40px;
     }
     .back-button img{

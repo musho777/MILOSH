@@ -58,11 +58,12 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class="shop-container">
+
+    <div class="shop-banner">
+        <div class="shop-container">
       <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
         <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
     </div>
-    <div class="shop-banner">
         <img class="shop-image" style="width: 50%" src="{{ asset('images/banners/Group 79.png') }}" alt="Subtract">
         <p class="description">
             Наш интернет-магазин, это удобное и комфортное пространство для покупок.<br>
@@ -199,6 +200,9 @@
         display: flex;
         flex-direction: column;
     }
+    .shop-banner{
+        position: relative;
+    }
 
     .chat-header, .chat-footer {
         border-bottom: 2px solid black;
@@ -282,11 +286,15 @@
         display: flex;
         gap: 5px;
     }
+    .description{
+margin-bottom:0 !important; 
+padding-bottom:100px;
+    }
     .back-button{
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top:40px;
         left: 40px;
         >img{
             width: 100%;

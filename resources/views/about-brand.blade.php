@@ -10,6 +10,7 @@
 
         .hit-product-container {
             display: flex;
+            position: relative;
             width: 100%;
             border: 5px solid black;
             border-bottom:0;
@@ -441,7 +442,7 @@
         width: 61px;
         height: 61px;
         z-index: 1000;
-        top:100px;
+        top:40px;
         left: 40px;
     }
     .back-button img{
@@ -500,11 +501,12 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
+
 
 <div class="hit-product-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+</div>
     <div class="left-side">
         <div class="left-side-div">
             <img class="fone" src="{{ asset('images/banners/about-brand-banner.png') }}" alt="Фон">
