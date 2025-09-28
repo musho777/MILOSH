@@ -13,7 +13,7 @@
                                 <li><a href="{{route('showHitProductPage')}}">ХИТ- ПРОДУКТ</a></li>
                                 <li><a href="{{ route('showCatalogPage', ['category' => 'СУМКИ']) }}">СУМКИ</a></li>
                                 <li><a href="{{ route('showCatalogPage', ['category' => 'ОДЕЖДА']) }}">ОДЕЖДА</a></li>
-                                <li><a href="{{ route('showCatalogPage', ['category' => 'АКСЕСУАРЫ']) }}">АКСЕСУАРЫ</a></li>
+                                <li><a href="{{ route('showCatalogPage', ['category' => 'АКСЕССУАРЫ']) }}">АКСЕССУАРЫ</a></li>
                                 <li><a href="{{route('showActionsPage')}}">АКЦИИ</a></li>
                                 <li><a href="#">КЛИЕНТСКИЙ СЕРВИС</a></li>
                             </ul>
@@ -64,7 +64,7 @@
                 <li><a href="{{route('showHitProductPage')}}">ХИТ- ПРОДУКТ</a></li>
                 <li><a href="{{ route('showCatalogPage', ['category' => 'СУМКИ']) }}">СУМКИ</a></li>
                 <li><a href="{{ route('showCatalogPage', ['category' => 'ОДЕЖДА']) }}">ОДЕЖДА</a></li>
-                <li><a href="{{ route('showCatalogPage', ['category' => 'АКСЕСУАРЫ']) }}">АКСЕСУАРЫ</a></li>
+                <li><a href="{{ route('showCatalogPage', ['category' => 'АКСЕССУАРЫ']) }}">АКСЕССУАРЫ</a></li>
                 <li><a href="{{route('showActionsPage')}}">АКЦИИ</a></li>
                 <li><a href="#">КЛИЕНТСКИЙ СЕРВИС</a></li>
             </ul>
