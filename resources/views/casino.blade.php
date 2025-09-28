@@ -175,7 +175,7 @@
     }
 
     .text-zone h3 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .text-zone p {

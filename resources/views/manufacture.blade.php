@@ -15,6 +15,8 @@
             display: flex;
             width: 100%;
             border: 5px solid black;
+            border-left:0;
+            border-right:0;
             border-bottom:0;
             border-top:0;
         }
@@ -32,6 +34,7 @@
         }
         .right-side div{
             width: 100%;
+            border-bottom:0;
         }
 
 
@@ -41,6 +44,7 @@
             width: 100%;
             height: 100%!important;
             margin-bottom: 0;
+            o
         }
 
 
@@ -49,12 +53,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-right: 5px solid black;
               overflow: visible;
             height: auto;
         }
 
         .fone {
+            object-fit: cover;
             width: 100%;
             height: auto;
             display: block;
@@ -127,6 +131,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-bottom:4px solid !important;
         }
 
         .green-zone img {
@@ -344,6 +349,9 @@
         width: 100%;
         height: 100%;
     }
+    .bottom-image{
+        border-bottom:2px solid
+    }
 
 
     </style>
@@ -409,7 +417,7 @@
             <div class="basket-icon">
                 <img src="{{ asset('assets/images/yellow-basket.svg') }}" alt="Корзина">
             </div>
-            <img src="{{ asset('images/banners/manufacture-bottom-banner.png') }}" alt="Хит-продукт нижняя часть">
+            <img class = "bottom-image" src="{{ asset('images/banners/manufacture-bottom-banner.png') }}" alt="Хит-продукт нижняя часть">
         </div>
     </div>
 
