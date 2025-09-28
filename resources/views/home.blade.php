@@ -394,6 +394,27 @@
     closeSearch.addEventListener('click', () => {
         searchContainer.classList.remove('active');
     });
+    
+    // Add click handlers for tall images
+    document.addEventListener('DOMContentLoaded', function() {
+        // First image - navigate to shop
+        const tallTop = document.querySelector('.tall-top');
+        if (tallTop) {
+            tallTop.addEventListener('click', function() {
+                window.location.href = '{{ route("showShopPage") }}';
+            });
+            tallTop.style.cursor = 'pointer';
+        }
+        
+        // Second image - navigate to manufacture
+        const tallBottom = document.querySelector('.tall-bottom');
+        if (tallBottom) {
+            tallBottom.addEventListener('click', function() {
+                window.location.href = '{{ route("showManufacturePage") }}';
+            });
+            tallBottom.style.cursor = 'pointer';
+        }
+    });
 </script>
 
 <style>
