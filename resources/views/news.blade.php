@@ -247,7 +247,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
