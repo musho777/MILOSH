@@ -264,8 +264,8 @@ main,
 
 .right-block .subtract-img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -6px;
+    left: -6px;
     z-index: 1;
     width: 150px;
     height: auto;
