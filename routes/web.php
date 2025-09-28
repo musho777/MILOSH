@@ -27,6 +27,7 @@ Route::get('/microfibra', [HomeController::class, 'showFibraPage'])->name('showF
 Route::get('/manufacture', [HomeController::class, 'showManufacturePage'])->name('showManufacturePage');
 Route::get('/news', [HomeController::class, 'showNewsPage'])->name('showNewsPage');
 Route::get('/alisa', [HomeController::class, 'showAlisaPage'])->name('showAlisaPage');
+Route::get('/client-service', [HomeController::class, 'showClientServicePage'])->name('showClientServicePage');
 Route::get('/login', [HomeController::class, 'showLoginPage'])->name('showLoginPage');
 Route::get('/registration', [HomeController::class, 'showRegistrationPage'])->name('showRegistrationPage');
 Route::post('/register', [LoginController::class, 'register'])->name('register');

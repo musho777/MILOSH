@@ -15,7 +15,7 @@
                                 <li><a href="{{ route('showCatalogPage', ['category' => 'ОДЕЖДА']) }}">ОДЕЖДА</a></li>
                                 <li><a href="{{ route('showCatalogPage', ['category' => 'АКСЕССУАРЫ']) }}">АКСЕССУАРЫ</a></li>
                                 <li><a href="{{route('showActionsPage')}}">АКЦИИ</a></li>
-                                <li><a href="#">КЛИЕНТСКИЙ СЕРВИС</a></li>
+                                <li><a href="{{route('showClientServicePage')}}">КЛИЕНТСКИЙ СЕРВИС</a></li>
                             </ul>
                         </li>
                         <li class="nav__item nav__item--has-dropdown">
@@ -66,7 +66,7 @@
                 <li><a href="{{ route('showCatalogPage', ['category' => 'ОДЕЖДА']) }}">ОДЕЖДА</a></li>
                 <li><a href="{{ route('showCatalogPage', ['category' => 'АКСЕССУАРЫ']) }}">АКСЕССУАРЫ</a></li>
                 <li><a href="{{route('showActionsPage')}}">АКЦИИ</a></li>
-                <li><a href="#">КЛИЕНТСКИЙ СЕРВИС</a></li>
+                <li><a href="{{route('showClientServicePage')}}">КЛИЕНТСКИЙ СЕРВИС</a></li>
             </ul>
         </li>
         <li class="mobile-menu__item--has-dropdown">
