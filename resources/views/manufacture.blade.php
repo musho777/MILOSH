@@ -248,7 +248,7 @@
         }
 
         /* Responsive styles to fix UI crash */
-        @media (max-width: 1300px) {
+        @media (max-width: 1440px) {
             .hit-product-container {
                 height: auto;
             }
@@ -277,6 +277,7 @@
                 line-height: 1.4;
                 margin-bottom: 15px;
                 padding-bottom: 15px;
+                padding-left:80px;
             }
             
             .title {
@@ -316,11 +317,19 @@
                 padding-bottom: 12px;
                 width: 100%;
                 max-width: 100%;
+                padding-left:0px;
+
             }
             
             .title {
                 font-size: 24px;
                 margin-bottom: 10px;
+            }
+        }
+
+        @media (min-width: 2001px) {
+            .text-zone {
+                width: 70%;
             }
         }
     .back-button{

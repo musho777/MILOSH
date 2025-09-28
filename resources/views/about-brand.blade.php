@@ -35,7 +35,9 @@
             width: 100%;
             height: 100%!important;
             margin-bottom: 0;
+            object-fit:cover;
         }
+    
 
 
         .left-side {
@@ -43,7 +45,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-right: 5px solid black;
             overflow: visible;
             height: auto;
         }
@@ -58,10 +59,9 @@
             position: absolute;
             z-index: 1;
             top:0;
-            left: 37%;
+            right:40px;
             height: 100%;
             object-fit: cover;
-            padding-right:40px;
         }
 
         .left-side-bottom {
@@ -76,6 +76,7 @@
             width: 100%;
             height: auto;
             margin-bottom: 0; /* На всякий случай */
+            /* border-top:6px solid; */
         }
 
 
@@ -153,17 +154,11 @@
              color:#E5231E;
             font-weight: 700;
             vertical-align: middle;
-            width: 663px;
-
             line-height: 150%;
-            letter-spacing: -1.1%;
             padding-bottom:40px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
         }
         /* Responsive styles to fix UI crash */
-        @media (max-width: 1300px) {
+        @media (max-width: 1440px) {
             .hit-product-container {
                 height: auto;
             }
@@ -192,6 +187,8 @@
                 line-height: 1.4;
                 margin-bottom: 15px;
                 padding-bottom: 15px;
+                padding-left:80px;
+
             }
             
             .title {
@@ -199,13 +196,22 @@
                 margin-bottom: 15px;
             }
         }
+           @media (min-width: 2001px) {
+            .text-zone {
+                max-width: 70% !important   ;
+            }
+        }
 
-        @media (max-width: 768px) {
+        
+
+        @media (max-width: 950px) {
             .hit-product-container {
                 flex-direction: column-reverse;
                 height: auto;
             }
-            
+             .basket-icon{
+                display: none;
+            }
             .left-side {
                 border-right: 0;
                 border-bottom: 5px solid black;
@@ -231,6 +237,8 @@
                 padding-bottom: 12px;
                 width: 100%;
                 max-width: 100%;
+                padding-left:0px;
+                
             }
             
             .title {
@@ -383,6 +391,10 @@
         border: none;
     }
 
+    .bottom-image{
+        border-top:5px solid;
+    }
+
     .search-left a {
         text-decoration: none;
         color: black;
@@ -502,7 +514,7 @@
             <div class = "basket-icon">
                 <img src="{{ asset('assets/images/blue-basket.svg') }}" alt="Корзина" >
             </div>
-            <img src="{{ asset('images/banners/about-brand-bottom-banner.png') }}" alt="Хит-продукт нижняя часть">
+            <img class = "bottom-image" src="{{ asset('images/banners/about-brand-bottom-banner.png') }}" alt="Хит-продукт нижняя часть">
         </div>
     </div>
 
