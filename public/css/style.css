@@ -1436,6 +1436,46 @@ main,
     }
 }
 
+@media (max-width: 450px) {
+    .container1 {
+        height: 450px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container2 {
+        height: 300px;
+    }
+    
+    .container3 {
+        height: 360px;
+    }
+    
+    .split-50 {
+        height: 350px;
+    }
+    
+    .right-block .text-overlay {
+        width: 50px;
+    }
+    
+    .right-block .subtract-img {
+        width: 115px;
+    }
+    
+    .grid-section {
+        grid-template-rows: repeat(2, 300px);
+    }
+    
+    .tall-left {
+        width: 35px;
+    }
+    
+    .car {
+        margin-top: -35px;
+    }
+}
+
 @media (max-width: 480px) {
     .header__inner,
     .banner__inner {
