@@ -101,6 +101,9 @@
      .hit-product-container{
             height: "40%";
         }
+        .bottom-section > div{
+            height: "40%";
+        }
     }
       @media (max-width:1440px){
     .text-zone {

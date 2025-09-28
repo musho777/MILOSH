@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МИКРОФИБРА</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
@@ -111,6 +112,17 @@
         border-bottom:0;
     }
 
+    
+
+    @media (max-width: 425px) {
+            .hit-product-container{
+                height: 450px;
+        }
+        .bottom-section{
+            height: 300px;
+        }
+   
+}
   
     @media (max-width: 1600px) {
     .left-side {

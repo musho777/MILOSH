@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Хит-Продукт</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
@@ -137,6 +138,24 @@
 </style> -->
 
 <style>
+    @media (max-width: 425px) {
+    .hit-product-container {
+        height: 400px !important;
+    }
+    .bottom-section > div{
+        height: 250px !important;
+    }
+    .right-side{
+        border:0;
+    }
+    .border-right{
+        border:0;
+    }
+    .left-side:{
+        border:0;
+    }
+}
+
     .hit-product-container {
         display: flex;
         width: 100%;
@@ -174,11 +193,6 @@
         height: 180px;
     }
 }
-   @media (max-width: 425px) {
-        .hit-product-container {
-            height: 300px !important;
-        }
-    }
 
 @media (max-width: 768px) {
     .center-image {
