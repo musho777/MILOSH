@@ -20,6 +20,7 @@
             border: 5px solid black;
             min-height: 100%;
             width: 100%;
+            position: relative;
         }
 
         .auth-wrapper {
@@ -27,7 +28,7 @@
             justify-content: space-between;
             padding: 60px 60px;
             max-width: 1980px;
-            margin: 40px auto;
+            margin: 60px auto;
             width: 100%;
         }
 
@@ -149,7 +150,7 @@
             position: absolute;
             width: 61px;
             height: 61px;
-            top:100px;
+            top: 20px;
             left: 40px;
         }
         .back-button img{
@@ -159,11 +160,12 @@
     </style>
 </head>
 <body>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
+
 
 <div class="auth-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+</div>
     <div class="auth-wrapper">
         <!-- Левая сторона -->
         <div class="auth-left">
