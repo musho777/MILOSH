@@ -54,9 +54,6 @@
             <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
         </div>
     </div>
-    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-    </div>
     <style>
         html, body {
             height: 100%;
@@ -86,12 +83,18 @@
             text-align: center;
             background-color: white;
         }
+        .journal-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
         .back-button{
             position: absolute;
             width: 61px;
             height: 61px;
-            top:100px;
+            top: 40px;
             left: 40px;
+            z-index: 1000;
         }
         .back-button img{
             width: 100%;
@@ -100,8 +103,11 @@
     </style>
 </head>
 <body>
-
-<table class="journal-table">
+<div class="journal-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
+    <table class="journal-table">
     <tr>
         <th colspan="3">ЖУРНАЛ</th>
     </tr>
@@ -115,7 +121,8 @@
         <td></td>
         <td></td>
     </tr>
-</table>
+    </table>
+</div>
  <div class="chat-widget" id="chatWidget">
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>

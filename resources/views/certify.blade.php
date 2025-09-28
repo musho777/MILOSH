@@ -56,10 +56,10 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
 <section class="certificates">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
     <h2 class="cert-title">СЕРТИФИКАТЫ</h2>
 
     <img src="{{ asset('animations/rama_.svg') }}" alt="Сертификаты" class="cert-image">
@@ -105,6 +105,7 @@
         padding: 50px 20px;
         text-align: center;
         border: 4px solid black;
+        position: relative;
     }
 
     .cert-title {
@@ -135,8 +136,9 @@
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top: 40px;
         left: 40px;
+        z-index: 1000;
     }
     .back-button img{
         width: 100%;

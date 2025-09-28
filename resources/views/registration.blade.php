@@ -20,6 +20,7 @@
             border: 5px solid black;
             padding: 60px 100px;
             min-height: 100vh;
+            position: relative;
         }
 
         h2 {
@@ -89,8 +90,9 @@
             position: absolute;
             width: 61px;
             height: 61px;
-            top:100px;
+            top: 40px;
             left: 40px;
+            z-index: 1000;
         }
         .back-button img{
             width: 100%;
@@ -99,11 +101,10 @@
     </style>
 </head>
 <body>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
-
 <div class="container-reg">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
     <h2>Настройки учетной записи</h2>
     <div class="privacy">политика конфиденциальности</div>
 

@@ -56,10 +56,11 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+
+<div class="casino-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
     <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
 </div>
-<div class="casino-container">
     <div class="left-side">
         <img class="left-side-img" src="{{ asset('images/banners/casino-banner.png') }}" alt="Зелёная зона">
     </div>

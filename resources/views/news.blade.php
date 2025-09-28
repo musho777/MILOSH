@@ -55,10 +55,10 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
 <div class="hit-product-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
     <div class="left-side">
 
     </div>
@@ -235,7 +235,7 @@
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top: 40px;
         left: 40px;
     }
     .back-button img{
