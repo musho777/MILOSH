@@ -494,8 +494,23 @@
         padding: 5px 10px;
         cursor: pointer;
     }
-
-
+    .left-side{
+        border-left:4px solid;
+        height:auto !important;
+        border-top:0;
+        border-bottom:0;
+    }
+    .right-side{
+   height:auto !important;
+        border-top:0;
+        border-bottom:0;
+    }
+    .right-sidediv{
+        border-top:0
+    }
+    .right-four{
+        border-top:4px solid;
+    }
     .search-container {
         display: none;
         position: fixed;
