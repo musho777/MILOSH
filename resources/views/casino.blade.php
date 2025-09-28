@@ -196,40 +196,23 @@
     }
      .basket-icon{
             width: 200px;
-            bottom: 100px;
+            bottom: 220px;
             left: 0;
             right: 0;
         }
         
-        .basket-icon img{
-            width: 200px;
-            height: 190px;
-        }
     
-    /* .basket-icon img{
+    .basket-icon img{
         width: 400px;
         height: 380px;
-    } */
-
-    /* Desktop responsive breakpoints */
-    @media (max-width: 2280px) {
-        .basket-icon{
-            width: 200px;
-            bottom: 100px;
-            left: 0;
-            right: 0;
-        }
-        
-        .basket-icon img{
-            width: 200px;
-            height: 190px;
-        }
     }
 
+    /* Desktop responsive breakpoints */
     @media (min-width: 1920px) and (max-width: 1979px) {
         .casino-container {
             height: 100%;
         }
+
 
         .animation-zone {
         }
@@ -256,6 +239,7 @@
             min-height: 100%;
         }
 
+
         .animation-zone {
         }
 
@@ -276,10 +260,31 @@
         }
     }
 
+      
+
+           @media (max-width:1440px) {
+         .basket-icon{
+            width: 200px;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+        }
+        
+           .basket-icon img{
+            width: 200px;
+            height: 190px;
+        }
+      
+    }
     /* Responsive breakpoints for mobile */
     @media (max-width: 870px) {
         .basket-icon{
             display:none
+        }
+
+          .basket-icon img{
+            width: 200px;
+            height: 190px;
         }
         
         .center-image {
@@ -329,6 +334,11 @@
       @media (max-width: 768px) {
         .basket-icon{
             display:none
+        }
+
+          .basket-icon img{
+            width: 200px;
+            height: 190px;
         }
         
         .center-image {
