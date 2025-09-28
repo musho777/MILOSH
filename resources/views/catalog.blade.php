@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <div class="shop-banner" style="border: 2px solid black;height: 100px">
+    <div class="shop-banner" style="height: 100px">
         <h1 style="margin-top: 30px">{{ $category }}</h1>
     </div>
     <div class="product-row">
@@ -221,6 +221,9 @@
         flex-direction: column;
     }
 
+    ..product-row{
+        width: 100% !important;
+    }
     .chat-header, .chat-footer {
         border-bottom: 2px solid black;
         padding: 10px;
@@ -267,6 +270,9 @@
         padding: 5px;
         border: none;
         border-bottom: 1px solid black;
+    }
+    .shop-banner{
+        border-bottom:2px solid;
     }
 
     .chat-footer .attach,
