@@ -314,6 +314,14 @@
         display: flex;
         gap: 5px;
     }
+    @media (max-width: 425px) {
+        .chat-widget {
+            width: 338px;
+            height: 450px;
+            bottom: 0;
+            right: 0;
+        }
+    }
 
     .search-container {
         display: none;

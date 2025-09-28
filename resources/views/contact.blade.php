@@ -560,4 +560,12 @@ document.addEventListener('DOMContentLoaded', function() {
         top: 10px;
         right: 20px;
     }
+    @media (max-width: 425px) {
+        .chat-widget {
+            width: 338px;
+            height: 450px;
+            bottom: 0;
+            right: 0;
+        }
+    }
 </style>
