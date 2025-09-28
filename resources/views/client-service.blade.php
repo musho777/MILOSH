@@ -74,6 +74,9 @@
         .service-right {
             width: 48%;
         }
+        .wrapper p {
+            text-transform: uppercase; /* makes all letters uppercase */
+        }
 
         .service-left h2,
         .service-right h2 {
@@ -93,6 +96,14 @@
             list-style: none;
             padding: 0;
             margin: 0;
+        }
+        .headerText{
+font-weight: 500;
+font-style: Medium !important;
+font-size: 32px !important;
+text-transform: uppercase;
+margin-bottom:50px !important;
+
         }
 
         .service-list li {
@@ -129,6 +140,9 @@
             width: 100%;
             height: 100%;
         }
+        .sale{
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -140,29 +154,25 @@
     <div class="service-wrapper">
         <!-- Левая сторона -->
         <div class="service-left">
-            <h2>Клиентский сервис</h2>
-            <p>Мы ценим каждого клиента и стремимся обеспечить высочайший уровень обслуживания на всех этапах взаимодействия с нашим брендом.</p>
-            
-            <ul class="service-list">
-                <li>Консультации по подбору изделий</li>
-                <li>Индивидуальный пошив</li>
-                <li>Уход и обслуживание изделий</li>
-                <li>Гарантийное обслуживание</li>
-                <li>Доставка по всему миру</li>
-                <li>Персональный менеджер для VIP-клиентов</li>
-            </ul>
+            <p class = "headerText">Клиентский сервис</p>
+            <div class = "wrapper">
+                    <p class = "sale">оплата</p>
+                    <p>ДОСТАВКА И ВРУЧЕНИЕ</p>
+                    <p>ВОЗВРАТ И ЗАМЕНА</p>
+                    <p>ЛИЧНЫЙ АККАУНТ</p>
+                    <p>РЕГИСТРАЦИЯ</p>
+                    <p>ИЗБРАННОЕ</p>
+                    <p>ЗАКАЗЫ</p>
+                    <p>ПОМОЩЬ (НАПИСАТЬ  НАМ)</p>
+                    <p>milosh policy</p>
+            </div>
         </div>
-
         <!-- Правая сторона -->
         <div class="service-right">
-            <h2>Свяжитесь с нами</h2>
-            <p>Наша команда экспертов готова ответить на все ваши вопросы и помочь в выборе идеального изделия.</p>
-            
-            <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
-            <p><strong>Email:</strong> service@milosh.ru</p>
-            <p><strong>Часы работы:</strong> Пн-Пт 10:00-20:00, Сб-Вс 11:00-19:00</p>
-            
-            <a href="{{route('showContactPage')}}"><button class="black-button">связаться с нами</button></a>
+            <p class = "headerText">оплата</p>
+             <div class = "wrapper">
+                 <p>ТЕКСТ</p>
+             </div>
         </div>
     </div>
 </div>
