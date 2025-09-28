@@ -43,7 +43,7 @@
                         <li><a href="{{route('showCartPage')}}"><img src="{{asset('images/Icons/basket.svg')}}" alt="Корзина"></a></li>
                     </ul>
             <!-- Burger menu button -->
-            <button class="burger" aria-label="Mobile menu">
+            <button class="burger1" >
                 <span></span>
                 <span></span>
                 <span></span>

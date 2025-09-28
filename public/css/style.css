@@ -148,7 +148,7 @@ main,
 .btn:hover {
     background: #444;
 }
-.burger {
+.burger1 {
     display: none;
     flex-direction: column;
     gap: 4px;
@@ -156,7 +156,7 @@ main,
     border: none;
     cursor: pointer;
 }
-.burger span {
+.burger1 span {
     width: 24px;
     height: 2px;
     background: #000;
@@ -1407,7 +1407,7 @@ main,
     .nav__right {
         display: none;
     }
-    .burger {
+    .burger1 {
         display: flex;
     }
     .btn {
