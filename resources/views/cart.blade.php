@@ -28,27 +28,50 @@
                 <p>гид по размерам</p>
             </div>
         </div>
-        <div class="step">
+        <div class = "step1">
             <h3>ШАГ 1</h3>
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Фамилия">
+        </div>
+        <div class="step">
+            <div class="input-row">
+                <input type="text" placeholder="Имя">
+            </div>
+            <div class="input-row">
+                <input type="text" placeholder="Фамилия">
+            </div>
             <div class="input-row">
                 <input type="text" placeholder="+7 (900)">
                 <input type="text" placeholder="Город">
             </div>
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Почта">
-            <input type="text" placeholder="Индекс">
+             <div class="input-row">
+
+                 <input type="text" placeholder="Email">
+             </div>
+             <div class="input-row">
+                 <input type="text" placeholder="Почта">
+             </div>
+             <div class="input-row">
+                 <input type="text" placeholder="Индекс">
+             </div>
         </div>
 
-        <div class="step">
+          <div class = "step1">
             <h3>ШАГ 2</h3>
+        </div>
+        <div class="step">
+              <div class="input-row">
             <input type="text" placeholder="Способ доставки">
+              </div>
+
+        </div>
+         <div class = "step1">
+            <h3>ШАГ 3</h3>
         </div>
 
         <div class="step">
-            <h3>ШАГ 3</h3>
+            <div class="input-row">
             <input type="text" placeholder="Способ оплаты">
+              </div>
+
         </div>
 
         <div class="cart-footer">
@@ -293,6 +316,19 @@
     .back-button img{
         width: 100%;
         height: 100%;
+    }
+    .step1{
+        border-top:4px solid;
+        border-bottom:4px solid;
+
+        padding:10px 20px;
+    }
+    .step1 >h3{
+        margin:0
+    }
+    .cart-footer{
+        padding:0 20px;
+        gap:10px
     }
 </style>
 
