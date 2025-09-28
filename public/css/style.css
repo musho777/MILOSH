@@ -468,6 +468,7 @@ main,
     background-size: 100% auto;
     background-position: top left;
     height: 100%;
+    border-right: 6px solid;
 }
 
 .tall-left img {
@@ -529,6 +530,7 @@ main,
     background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/images/banners/magazinInter1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: 6px solid;
 }
 .bg-int-bottom {
     background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/images/banners/magazinInter2.jpg");

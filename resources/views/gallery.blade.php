@@ -70,12 +70,12 @@
     </div>
 
     <div class="product-row">
-        <div class="product-box">Товар 1</div>
-        <div class="product-box">Товар 2</div>
-        <div class="product-box">Товар 3</div>
-        <div class="product-box">Товар 4</div>
+        <div class="product-box top">Товар 1</div>
+        <div class="product-box top">Товар 2</div>
+        <div class="product-box top">Товар 3</div>
+        <div class="product-box top">Товар 4</div>
 
-        <div class="product-box tall-box">
+        <div class="product-box tall-box left">
             <img src="{{ asset('animations/n2.svg') }}" alt="Subtract">
         </div>
         <div class="product-box">Товар 6</div>
@@ -98,7 +98,7 @@
 
 </div>
 <div>
-    <img style="display: block;" src="{{ asset('animations/n1.svg') }}" alt="Subtract">
+    <img style="display: block; margin-top:-11px; z-index:2;position:relative" src="{{ asset('animations/n1.svg') }}" alt="Subtract">
 </div>
  <div class="chat-widget" id="chatWidget">
     <div class="chat-header">
@@ -128,6 +128,7 @@
     .product-row {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+        width: 100%;        
     }
 
 
@@ -144,19 +145,18 @@
     .product-box.tall-box {
         position: relative; /* нужно для абсолютного позиционирования вложенного img */
         grid-row: span 2;
-        height: calc(2 * 350px + 20px); /* 2 строки + gap */
+        height: calc(2 * 350px + 20px);
         padding: 20px;
         border: 2px solid black;
         box-sizing: border-box;
-        border-top: 3px solid black;
         border-bottom: 0;
     }
 
     .product-box.tall-box img {
         position: absolute;
-        top: -3px;
+        top: -2px;
         right: -4px;
-        width: 59.3px;
+        width: 59px;
     }
 
     .back-button{
@@ -169,6 +169,12 @@
     .back-button img{
         width: 100%;
         height: 100%;
+    }
+    .left{
+        border-bottom:3px solid black !important; 
+    }
+    .top{
+        border-top:3px solid black !important; 
     }
 
 
