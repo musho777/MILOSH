@@ -342,13 +342,38 @@ main,
 
 .grid-section {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr; /* Широкие боковые колонки */
+    grid-template-columns: 1.5fr 500px 1.5fr; /* Fixed middle column width */
     grid-template-rows: repeat(2, 767px);
     width: 100%;
     margin: 0 auto;
     gap: 0;
     margin-top: -9px;
     border-top: 4px solid black;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1400px) {
+    .grid-section {
+        grid-template-columns: 1.5fr 500px 1.5fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid-section {
+        grid-template-columns: 1.5fr 450px 1.5fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-section {
+        grid-template-columns: 1.5fr 400px 1.5fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .grid-item {
@@ -376,6 +401,44 @@ main,
     display: flex;
     padding: 0;
     overflow: hidden;
+    min-width: 500px; /* Fixed minimum width to maintain image aspect ratio */
+    width: 500px; /* Fixed width for consistent display */
+}
+
+/* Background image fix for grid items */
+.grid-item.bg-subtract {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Responsive adjustments for tall grid item */
+@media (max-width: 1400px) {
+    .grid-item.tall {
+        min-width: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid-item.tall {
+        min-width: 450px;
+        width: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-item.tall {
+        min-width: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-item.tall {
+        min-width: 100%;
+        width: 100%;
+    }
 }
 
 /* Левая колонка */
