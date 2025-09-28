@@ -88,12 +88,13 @@
         display: flex;
         width: 100%;
         height: 90vh; /* верхняя часть экрана — половина высоты */
-        border: 5px solid black;
+        border: 2px solid black;
     }
 
     .left-side,
     .right-side {
         flex: 1; /* 50% ширины каждый */
+        border-width:3px 3px 3px 2.5px;
     }
 
 
@@ -104,7 +105,7 @@
 }
 
     .left-side{
-        border-right: 5px solid black;
+        border-right:2.5px solid;
     }
 
 
