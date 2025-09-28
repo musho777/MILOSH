@@ -153,18 +153,20 @@ a {
 }
 
 .cart-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background-color: white;
+    padding: 0;
 }
 
 .cart-box {
-    flex: 1 1 330px; /* минимальная ширина блока 200px, но растягивается */
     border: 2px solid black;
     height: 350px;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .cart-sidebar {
