@@ -829,6 +829,12 @@ main,
         gap: 40px;
     }
 }
+@media (max-width: 425px) {
+    .footer-top {
+        padding: 10px;
+        gap: 40px;
+    }
+}
 
 .line {
     height: 3px;
@@ -1446,31 +1452,31 @@ main,
     .container2 {
         height: 300px;
     }
-    
+
     .container3 {
         height: 360px;
     }
-    
+
     .split-50 {
         height: 350px;
     }
-    
+
     .right-block .text-overlay {
         width: 50px;
     }
-    
+
     .right-block .subtract-img {
         width: 115px;
     }
-    
+
     .grid-section {
         grid-template-rows: repeat(2, 300px);
     }
-    
+
     .tall-left {
         width: 35px;
     }
-    
+
     .car {
         margin-top: -35px;
     }
