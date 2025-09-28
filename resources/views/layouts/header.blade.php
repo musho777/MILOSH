@@ -36,14 +36,16 @@
                         <div  class = "headerLine"></div>
                     </ul>
                     <ul class="nav__icons">
-                        <li id="openSearch"><a href="#"><img src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск"></a></li>
-                        <li><a href="#"><img src="{{asset('images/Icons/избранное.svg')}}" alt="Избранное"></a></li>
+                        <li id="openSearch"><a href="#"><img src="{{asset('images/Icons/search.svg')}}" alt="Поиск"></a></li>
+                        <li><a href="#"><img src="{{asset('images/Icons/favorits.svg')}}" alt="Избранное"></a></li>
                         @guest<li><a href="{{route('showLoginPage')}}"><img src="{{asset('images/Icons/Group (3).png')}}" alt="Профиль"></a></li>@endguest
                         @auth<li><a href="{{route('showSettingsPage')}}"><img src="{{asset('images/Icons/Group (3).png')}}" alt="Профиль"></a></li> @endauth
-                        <li><a href="{{route('showCartPage')}}"><img src="{{asset('images/Icons/корзина.svg')}}" alt="Корзина"></a></li>
+                        <li><a href="{{route('showCartPage')}}"><img src="{{asset('images/Icons/basket.svg')}}" alt="Корзина"></a></li>
                     </ul>
             <!-- Burger menu button -->
             <button class="burger" aria-label="Mobile menu">
+                <span></span>
+                <span></span>
                 <span></span>
             </button>
         </div>
@@ -84,11 +86,11 @@
         </li>
     </ul>
     <ul class="mobile-menu__icons">
-        <li><a href="#"><img src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск"></a></li>
-        <li><a href="#"><img src="{{asset('images/Icons/избранное.svg')}}" alt="Избранное"></a></li>
+        <li><a href="#"><img src="{{asset('images/Icons/search.svg')}}" alt="Поиск"></a></li>
+        <li><a href="#"><img src="{{asset('images/Icons/favorits.svg')}}" alt="Избранное"></a></li>
         @guest<li><a href="{{route('showLoginPage')}}"><img src="{{asset('images/Icons/Group (3).png')}}" alt="Профиль"></a></li>@endguest
         @auth<li><a href="{{route('showSettingsPage')}}"><img src="{{asset('images/Icons/Group (3).png')}}" alt="Профиль"></a></li>@endauth
-        <li><a href="{{route('showCartPage')}}"><img src="{{asset('images/Icons/корзина.svg')}}" alt="Корзина"></a></li>
+        <li><a href="{{route('showCartPage')}}"><img src="{{asset('images/Icons/basket.svg')}}" alt="Корзина"></a></li>
     </ul>
 </div>
 

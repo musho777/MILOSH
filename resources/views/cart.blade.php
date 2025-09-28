@@ -71,7 +71,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -132,7 +132,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 

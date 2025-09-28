@@ -9,6 +9,53 @@
 </head>
 <body>
 @include('layouts.header')
+<!-- Контейнер поиска -->
+<div class="search-container" id="searchContainer">
+    <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
+    <!-- Поле ввода -->
+    <div class="search-input-wrapper">
+        <img style="width: 35px" src="{{asset('images/Icons/search.svg')}}" alt="Поиск">
+        <input type="text" placeholder="введите название или артикул">
+    </div>
+
+    <!-- Левая колонка -->
+    <div class="search-left">
+        <strong>ИСТОРИЯ ПОИСКА</strong>
+        <span>сумка</span>
+        <a href="">
+            <div>НОВОЕ</div>
+        </a>
+        <a href="">
+            <div>ХИТ-ПРОДУКТ</div>
+        </a>
+        <a href="">
+            <div>СУМКИ</div>
+        </a>
+        <a href="">
+            <div>ОДЕЖДА</div>
+        </a>
+        <a href="">
+            <div>АКСЕССУАРЫ</div>
+        </a>
+        <a href="">
+            <div>СКИДКИ И АКЦИИ</div>
+        </a>
+        <a href="">
+            <div>КЛИЕНТСКИЙ СЕРВИС</div>
+        </a>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="search-right">
+        <div class="product-grid">
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+        </div>
+        <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
+    </div>
+</div>
 <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
     <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
 </div>
@@ -44,7 +91,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -75,7 +122,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 
@@ -130,7 +177,55 @@
     });
 </script>
 <style>
+    .search-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        z-index: 9999;
+        padding: 80px 40px 40px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        flex-direction: row;
+        gap: 40px;
+    }
 
+    .search-container.active {
+        display: flex;
+    }
+
+    .search-input-wrapper {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .search-input-wrapper input {
+        border: none;
+        border-bottom: 2px solid black;
+        padding: 6px 10px;
+        width: 300px;
+        outline: none;
+    }
+
+    .search-left {
+        flex: 0 0 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    .search-right {
+        flex: 1;
+    }
     .container-actions {
         border: 4px solid #000;
     }
@@ -364,3 +459,16 @@
     }
 
 </style>
+<script>
+    const openSearch = document.getElementById('openSearch');
+    const searchContainer = document.getElementById('searchContainer');
+    const closeSearch = document.getElementById('closeSearchSidebar'); // Кнопка закрытия
+
+    openSearch.addEventListener('click', () => {
+        searchContainer.classList.add('active');
+    });
+
+    closeSearch.addEventListener('click', () => {
+        searchContainer.classList.remove('active');
+    });
+</script>

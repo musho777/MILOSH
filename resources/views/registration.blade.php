@@ -188,7 +188,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 

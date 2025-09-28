@@ -56,9 +56,9 @@
 
         .animation-glaz {
             position: absolute;
-            width: 100%;
             z-index: 1;
             top:0;
+            left: 37%;
             height: 100%;
             object-fit: cover;
             padding-right:40px;
@@ -155,7 +155,7 @@
             font-weight: 700;
             vertical-align: middle;
             width: 663px;
-            font-family: Comfortaa;
+
             line-height: 150%;
             letter-spacing: -1.1%;
             padding-bottom:40px;
@@ -429,6 +429,7 @@
         position: absolute;
         width: 61px;
         height: 61px;
+        z-index: 1000;
         top:100px;
         left: 40px;
     }
@@ -446,7 +447,7 @@
     <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
     <!-- Поле ввода -->
     <div class="search-input-wrapper">
-        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <img style="width: 35px" src="{{asset('images/Icons/search.svg')}}" alt="Поиск">
         <input type="text" placeholder="введите название или артикул">
     </div>
 
@@ -495,14 +496,14 @@
 <div class="hit-product-container">
     <div class="left-side">
         <div class="left-side-div">
-            <img class="fone" src="{{ asset('images/banners/фон.png') }}" alt="Фон">
+            <img class="fone" src="{{ asset('images/banners/about-brand-banner.png') }}" alt="Фон">
             <img class="animation-glaz" src="{{ asset('animations/glaz-2.svg') }}" alt="Глаз">
         </div>
         <div class="left-side-bottom">
             <div class = "basket-icon">
-                <img src="{{ asset('assets/images/корзина4.svg') }}" alt="Корзина" >
+                <img src="{{ asset('assets/images/blue-basket.svg') }}" alt="Корзина" >
             </div>
-            <img src="{{ asset('images/banners/хит-п.png') }}" alt="Хит-продукт нижняя часть">
+            <img src="{{ asset('images/banners/about-brand-bottom-banner.png') }}" alt="Хит-продукт нижняя часть">
         </div>
     </div>
 
@@ -519,7 +520,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -550,7 +551,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 

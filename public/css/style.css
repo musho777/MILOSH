@@ -183,11 +183,12 @@ main,
 
 .banner__logo {
     width: 100%;
-    background-image: url("/assets/images/baner.png");
+    background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/assets/images/baner.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
+    height: 550px;
     display: flex;
     align-items: center;
     border: 5px solid black;
@@ -346,7 +347,8 @@ main,
     width: 100%;
     margin: 0 auto;
     gap: 0;
-    margin-top: -15px;
+    margin-top: -9px;
+    border-top: 4px solid black;
 }
 
 .grid-item {
@@ -385,7 +387,7 @@ main,
 }
 
 .tall-left.bg-lenta {
-    background-image: url("/images/banners/лента.png");
+    background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/images/banners/lenta.png");
     background-repeat: repeat-y;
     background-size: 100% auto;
     background-position: top left;
@@ -448,12 +450,12 @@ main,
     margin-top: -2px;
 }
 .bg-int-top {
-    background-image: url("/images/banners/магазин-интерьер2.jpg");
+    background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/images/banners/magazinInter1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .bg-int-bottom {
-    background-image: url("/images/banners/магазин-интерьер3.jpg");
+    background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/images/banners/magazinInter2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -817,7 +819,7 @@ main,
 
 .footer-middle__logo {
     width: 100%;
-    background-image: url("/assets/images/banner.png");
+    background-image: url("https://xn----nbck7b7ald8atlv.xn--y9a3aq/MILOSH/public/assets/images/banner.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -889,6 +891,10 @@ main,
 .main-img1 {
     /* width: 120%; */
     object-fit: cover;
+    border: 5px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
 }
 .image-wrapper1 {
     /* height: 250px; */

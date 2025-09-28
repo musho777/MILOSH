@@ -12,10 +12,26 @@
             background: white;
         }
 
+        .alisa-content:hover {
+            cursor: url('{{ asset('assets/images/Group11.svg') }}'), auto;
+        }
+
         .alisa-first-section {
             display: flex;
             height: 686px;
             background: white;
+            position: relative;
+
+        }
+
+        .center-image {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            width: 200px;
+            height: 200px;
         }
 
         .alisa-first-section > div {
@@ -30,7 +46,7 @@
 
         .alisa-first-section .right-div {
             border-left: 1.5px solid black;
-            background-image: url('{{ asset('assets/images/меню.png') }}');
+            background-image: url('{{ asset('assets/images/alisa-bg.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -76,6 +92,11 @@
                 height: 1000px;
             }
 
+            .center-image {
+                width: 120px;
+                height: 120px;
+            }
+
             .alisa-first-section > div {
                 height: 343px;
                 border: 3px solid black;
@@ -86,14 +107,14 @@
                 border-bottom: 1.5px solid black;
             }
 
-            .alisa-first-section .right-div {
-                border-left: 3px solid black;
-                border-top: 1.5px solid black;
-                background-image: url('{{ asset('assets/images/меню.png') }}');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
+            {{--.alisa-first-section .right-div {--}}
+            {{--    border-left: 3px solid black;--}}
+            {{--    border-top: 1.5px solid black;--}}
+            {{--    background-image: url('{{ asset('assets/images/меню.png') }}');--}}
+            {{--    background-size: cover;--}}
+            {{--    background-position: center;--}}
+            {{--    background-repeat: no-repeat;--}}
+            {{--}--}}
 
             .alisa-second-section {
                 grid-template-columns: repeat(2, 1fr);
@@ -136,6 +157,14 @@
         width: 100%;
         height: 100%;
     }
+
+        @media (max-width: 1600px) {
+
+            .center-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -145,7 +174,7 @@
     <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
     <!-- Поле ввода -->
     <div class="search-input-wrapper">
-        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <img style="width: 35px" src="{{asset('images/Icons/search.svg')}}" alt="Поиск">
         <input type="text" placeholder="введите название или артикул">
     </div>
 
@@ -195,6 +224,7 @@
     <!-- First Section: 2 white divs side by side -->
     <section class="alisa-first-section">
         <div class="left-div"></div>
+        <img class="center-image" src="{{ asset('assets/images/rabbit-basket.svg') }}" alt="Корзина">
         <div class="right-div"></div>
     </section>
 
@@ -211,7 +241,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -243,7 +273,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 

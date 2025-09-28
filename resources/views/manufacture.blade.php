@@ -327,6 +327,7 @@
             }
         }
     .back-button{
+        z-index: 1000;
         position: absolute;
         width: 61px;
         height: 61px;
@@ -349,7 +350,7 @@
     <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
     <!-- Поле ввода -->
     <div class="search-input-wrapper">
-        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <img style="width: 35px" src="{{asset('images/Icons/search.svg')}}" alt="Поиск">
         <input type="text" placeholder="введите название или артикул">
     </div>
 
@@ -397,18 +398,18 @@
 
 <div class="hit-product-container">
     <div class="left-side">
-        <img class="fone" src="{{ asset('images/banners/хит продукт.png') }}" alt="Фон">
+        <img class="fone" src="{{ asset('images/banners/manufacture-banner.png') }}" alt="Фон">
         <div class="left-side-bottom">
             <div class="basket-icon">
-                <img src="{{ asset('assets/images/корзина1.svg') }}" alt="Корзина">
+                <img src="{{ asset('assets/images/yellow-basket.svg') }}" alt="Корзина">
             </div>
-            <img src="{{ asset('images/banners/хит.png') }}" alt="Хит-продукт нижняя часть">
+            <img src="{{ asset('images/banners/manufacture-bottom-banner.png') }}" alt="Хит-продукт нижняя часть">
         </div>
     </div>
 
     <div class="right-side">
         <div class="green-zone">
-            <img class="green-zone-img" src="{{ asset('images/banners/мануфактура.png') }}" alt="Зелёная зона">
+            <img class="green-zone-img" src="{{ asset('images/banners/manufacture.png') }}" alt="Зелёная зона">
         </div>
         <div class="text-zone">
             <p class="title" >Мануфактура</p>
@@ -429,7 +430,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -475,7 +476,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 

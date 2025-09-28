@@ -14,7 +14,7 @@
     <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
     <!-- Поле ввода -->
     <div class="search-input-wrapper">
-        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <img style="width: 35px" src="{{asset('images/Icons/search.svg')}}" alt="Поиск">
         <input type="text" placeholder="введите название или артикул">
     </div>
 
@@ -61,14 +61,14 @@
 </div>
 <div class="casino-container">
     <div class="left-side">
-        <img class="left-side-img" src="{{ asset('images/banners/меню.png') }}" alt="Зелёная зона">
+        <img class="left-side-img" src="{{ asset('images/banners/casino-banner.png') }}" alt="Зелёная зона">
     </div>
     <div class="right-side">
         <div class="animation-zone">
             <img class="right-side-img" src="{{ asset('animations/m2-2b.svg') }}" alt="Зелёная зона">
         </div>
          <div class="basket-icon">
-                <img src="{{ asset('assets/images/корзина5.svg') }}" alt="Корзина">
+                <img src="{{ asset('assets/images/green-basket.svg') }}" alt="Корзина">
             </div>
         <div class="right-bottom">
             <div class="text-zone">
@@ -415,6 +415,7 @@
         position: absolute;
         width: 61px;
         height: 61px;
+        z-index: 1000;
         top:100px;
         left: 40px;
     }
@@ -428,7 +429,7 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -459,7 +460,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 

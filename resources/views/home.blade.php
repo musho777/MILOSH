@@ -14,7 +14,7 @@
     <span class="close-sidebar" id="closeSearchSidebar">&times;</span>
     <!-- Поле ввода -->
     <div class="search-input-wrapper">
-        <img style="width: 35px" src="{{asset('images/Icons/поиск.svg')}}" alt="Поиск">
+        <img style="width: 35px" src="{{asset('images/Icons/search.svg')}}" alt="Поиск">
         <input type="text" placeholder="введите название или артикул">
     </div>
 
@@ -60,7 +60,7 @@
     <div class="banner__logo">
         <div class="container">
             <div class="banner__text">
-         <img src="{{ asset('assets/images/M.png') }}" alt="M" class="letter-img letter-m">
+                <img src="{{ asset('assets/images/M.png') }}" alt="M" class="letter-img letter-m">
                 <img src="{{ asset('assets/images/I.png') }}" alt="I" class="letter-img letter-i">
                 <img src="{{ asset('assets/images/L.png') }}" alt="L" class="letter-img letter-l">
                 <img src="{{ asset('assets/images/O.png') }}" alt="O" class="letter-img letter-o">
@@ -78,15 +78,15 @@
         <div class="split-50">
             <a href="{{ route('showAlisaPage') }}" class="left-block" style="text-decoration: none;">
                 <img src="{{ asset('images/banners/left_split.png') }}" alt="Left Split">
-                <img class="alisa" src="{{ asset('images/banners/алиса.png') }}" alt="Left Split">
+                <img class="alisa" src="{{ asset('images/banners/alisa.png') }}" alt="Left Split">
             </a>
             <div class="right-block">
                 <div>
                     <img class="subtract-img" src="{{ asset('images/banners/Subtract.png') }}" alt="Subtract">
-                    <img class="text-overlay" src="{{ asset('images/banners/о бренде.png') }}" alt="О бренде">
+                    <img class="text-overlay" src="{{ asset('images/banners/about-brand.png') }}" alt="О бренде">
                 </div>
-                 <a  href="{{ route('showAboutBrandPage') }}" class="image-wrapper">
-                     <img class="main-img" src="{{ asset('animations/003-2a.svg') }}" alt="Right Split">
+                <a href="{{ route('showAboutBrandPage') }}" class="image-wrapper">
+                    <img class="main-img" src="{{ asset('animations/003-2a.svg') }}" alt="Right Split">
                 </a>
             </div>
 
@@ -98,7 +98,7 @@
     <section class="grid-section">
         <!-- Первый блок -->
         <div class="grid-item bg-subtract">
-            <img  src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
+            <img src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
         </div>
 
         <!-- Tall блок (занимает 2 строки) -->
@@ -108,23 +108,23 @@
             </div>
             <div class="tall-right">
                 <div class="tall-top bg-int-top">
-                    <!-- <img  src="{{ asset('images/banners/магазин-интерьер.png') }}" alt="О бренде"> -->
+
                 </div>
                 <div class="tall-bottom bg-int-bottom">
-                    <!-- <img  src="{{ asset('images/banners/магазин-интерьер (1).png') }}" alt="О бренде"> -->
+
                 </div>
             </div>
         </div>
 
         <!-- Остальные 3 блока -->
         <div class="grid-item bg-subtract">
-            <img  src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
+            <img src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
         </div>
         <div class="grid-item bg-subtract">
-            <img  src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
+            <img src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
         </div>
         <div class="grid-item bg-subtract">
-            <img  src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
+            <img src="{{ asset('images/banners/Group 107.png') }}" alt="О бренде">
         </div>
     </section>
 
@@ -140,7 +140,8 @@
             <div class="right-two right-sidediv"></div>
             <div class="right-three right-sidediv">
                 <a href="{{route('showFibraPage')}}">
-                    <img class="right-three-img" src="{{ asset('images/banners/фото_товара.png') }}" alt="Banner Image">
+                    <img class="right-three-img" src="{{ asset('images/banners/microfibra-image.png') }}"
+                         alt="Banner Image">
                 </a>
             </div>
             <div class="right-four right-sidediv"></div>
@@ -158,7 +159,7 @@
             <div class="box3"></div>
         </div>
         <div class="right-divs">
-            <img class="banner-one" src="{{ asset('images/banners/фото_товара (1).png') }}" alt="Banner Image">
+            <img class="banner-one" src="{{ asset('images/banners/monsters.png') }}" alt="Banner Image">
         </div>
     </div>
     <div class="container3">
@@ -191,47 +192,47 @@
             </label>
         </div>
 
-            <div>
-                <h4>СЕРВИС</h4>
-                <ul  class = "contactDiv">
-                    <li><a href="">Помощь</a></li>
-                    <li><a href="">Доставка и вручение</a></li>
-                    <li><a href="">Возврат и замена</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>ЛИЧНЫЙ КАБИНЕТ</h4>
-                <ul  class = "contactDiv">
-                    <li><a href="">Мой профиль</a></li>
-                    <li><a href="">Мои заказы</a></li>
-                    <li><a href="">Избранное</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>О КОМПАНИИ</h4>
-                <ul  class = "contactDiv">
-                    <li><a href="{{route('showJournalPage')}}">О Milosh</a></li>
-                    <li><a href="{{route('showJournalPage')}}">Журнал</a></li>
-                    <li><a href="{{route('showContactPage')}}">Реквизиты</a></li>
-                    <li><a href="{{route('showCertifyPage')}}">Сертификаты</a></li>
-                    <li><a href="">MILOSH POLICY</a></li>
-                </ul>
-            </div>
-            <div id="contact">
-                <h4>КОНТАКТЫ</h4>
-                <div  class = "contactDiv">
-                    <p>Телефон Call-Центра: +7 800 770 05 93</p>
-                    <p>Написать в WhatsApp</p>
-                    <p>Написать на почту</p>
-                    <p>Рабочие часы службы обработки заказов:</p>
-                    <p>ежедневно, 10:00 - 21:00 (время Московское),</p>
-                    <p>кроме выходных и праздничных дней.</p>
-                    <div>
-                        <div class = "line"></div>
-                        <p>ОБРАТНЫЙ ЗВОНОК</p>
-                    </div>
+        <div>
+            <h4>СЕРВИС</h4>
+            <ul class="contactDiv">
+                <li><a href="">Помощь</a></li>
+                <li><a href="">Доставка и вручение</a></li>
+                <li><a href="">Возврат и замена</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>ЛИЧНЫЙ КАБИНЕТ</h4>
+            <ul class="contactDiv">
+                <li><a href="">Мой профиль</a></li>
+                <li><a href="">Мои заказы</a></li>
+                <li><a href="">Избранное</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>О КОМПАНИИ</h4>
+            <ul class="contactDiv">
+                <li><a href="{{route('showJournalPage')}}">О Milosh</a></li>
+                <li><a href="{{route('showJournalPage')}}">Журнал</a></li>
+                <li><a href="{{route('showContactPage')}}">Реквизиты</a></li>
+                <li><a href="{{route('showCertifyPage')}}">Сертификаты</a></li>
+                <li><a href="">MILOSH POLICY</a></li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h4>КОНТАКТЫ</h4>
+            <div class="contactDiv">
+                <p>Телефон Call-Центра: +7 800 770 05 93</p>
+                <p>Написать в WhatsApp</p>
+                <p>Написать на почту</p>
+                <p>Рабочие часы службы обработки заказов:</p>
+                <p>ежедневно, 10:00 - 21:00 (время Московское),</p>
+                <p>кроме выходных и праздничных дней.</p>
+                <div>
+                    <div class="line"></div>
+                    <p>ОБРАТНЫЙ ЗВОНОК</p>
                 </div>
             </div>
+        </div>
 
     </div>
 
@@ -294,7 +295,8 @@
     <div class="chat-header">
         <span>ОНЛАЙН-ЧАТ</span>
         <div class="chat-controls">
-            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check" style="width: 20px; height: 20px;"></button>
+            <button class="check"><img src="{{asset('assets/images/Rectangle.svg')}}" alt="Check"
+                                       style="width: 20px; height: 30px;"></button>
             <button class="close">✖</button>
         </div>
     </div>
@@ -324,7 +326,7 @@
         // Create minimized chat icon
         const minimizedChat = document.createElement('div');
         minimizedChat.className = 'minimized-chat';
-        minimizedChat.innerHTML = '<img src="{{asset("assets/images/чат.svg")}}" alt="Open Chat">';
+        minimizedChat.innerHTML = '<img src="{{asset("assets/images/openChat.svg")}}" alt="Open Chat">';
         minimizedChat.style.display = 'none';
         document.body.appendChild(minimizedChat);
 
@@ -395,9 +397,10 @@
 </script>
 
 <style>
-    .bg-subtract:hover {
-        cursor: url('/assets/images/Group 74.svg'), auto;
+    .tall-right:hover {
+        cursor: url('{{ asset('assets/images/Group74.svg') }}'), auto;
     }
+
     .chat-widget {
         width: 450px;
         height: 600px;
@@ -573,9 +576,10 @@
         width: 100px;
         height: 100px;
     }
-    .chat-controls{
-            align-items: center;
-    display: flex;
-    gap: 5px;
+
+    .chat-controls {
+        align-items: center;
+        display: flex;
+        gap: 5px;
     }
 </style>
