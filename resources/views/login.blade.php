@@ -16,12 +16,57 @@
             color: black;
         }
 
+        .auth-container {
+            border: 5px solid black;
+            min-height: 100%;
+            width: 100%;
+        }
+
         .auth-wrapper {
             display: flex;
             justify-content: space-between;
-            padding: 60px 100px;
-            min-height: 91vh;
-            border: 5px solid black;
+            padding: 60px 60px;
+            max-width: 1980px;
+            margin: 40px auto;
+            width: 100%;
+        }
+
+        /* Responsive adjustments to keep header and registration text aligned */
+        @media (max-width: 1919px) {
+            .auth-wrapper {
+                padding: 60px 40px;
+            }
+        }
+
+        @media (max-width: 1600px) {
+            .auth-wrapper {
+                padding: 60px 30px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .auth-wrapper {
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .auth-wrapper {
+                padding: 60px 15px;
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .auth-left,
+            .auth-right {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-wrapper {
+                padding: 40px 10px;
+            }
         }
 
         .auth-left,
@@ -118,43 +163,45 @@
     <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
 </div>
 
-<div class="auth-wrapper">
-    <!-- Левая сторона -->
-    <div class="auth-left">
-        <h2>Зарегистрируйте новую учетную запись</h2>
-        <p>Наслаждайтесь всеми эксклюзивными преимуществами, которые доступны только для Вашего Аккаунта</p>
-        <a href="{{route('showRegistrationPage')}}"><button class="black-button">создать аккаунт</button></a>
-    </div>
+<div class="auth-container">
+    <div class="auth-wrapper">
+        <!-- Левая сторона -->
+        <div class="auth-left">
+            <h2>Зарегистрируйте новую учетную запись</h2>
+            <p>Наслаждайтесь всеми эксклюзивными преимуществами, которые доступны только для Вашего Аккаунта</p>
+            <a href="{{route('showRegistrationPage')}}"><button class="black-button">создать аккаунт</button></a>
+        </div>
 
-    <!-- Правая сторона -->
-    <div class="auth-right">
-        <h2>Зарегистрированный клиент</h2>
-        <p style="width:400px;margin-bottom: 20px ">Если Вы зарегистрированный пользователь, пожалуйста, введите свой адрес электронной почты и пароль</p>
-        <form action="{{ route('login') }}" method="POST">
-            @csrf
+        <!-- Правая сторона -->
+        <div class="auth-right">
+            <h2>Зарегистрированный клиент</h2>
+            <p style="width:400px;margin-bottom: 20px ">Если Вы зарегистрированный пользователь, пожалуйста, введите свой адрес электронной почты и пароль</p>
+            <form action="{{ route('login') }}" method="POST">
+                @csrf
 
-            <input type="text" name="email" placeholder="email" value="{{ old('email') }}">
-            @error('email')
-            <div style="color:red">{{ $message }}</div>
-            @enderror
+                <input type="text" name="email" placeholder="email" value="{{ old('email') }}">
+                @error('email')
+                <div style="color:red">{{ $message }}</div>
+                @enderror
 
-            <div class="password-wrapper">
-                <input type="password" name="password" id="password" placeholder="пароль">
-                <button type="button" class="show-btn" onclick="togglePassword()">show</button>
-            </div>
-            @error('password')
-            <div style="color:red">{{ $message }}</div>
-            @enderror
+                <div class="password-wrapper">
+                    <input type="password" name="password" id="password" placeholder="пароль">
+                    <button type="button" class="show-btn" onclick="togglePassword()">show</button>
+                </div>
+                @error('password')
+                <div style="color:red">{{ $message }}</div>
+                @enderror
 
-            <div class="forgot-password">Забыли пароль?</div>
+                <div class="forgot-password">Забыли пароль?</div>
 
-            <label>
-                <input type="checkbox" name="remember"> Запомнить меня
-            </label>
+                <label>
+                    <input type="checkbox" name="remember"> Запомнить меня
+                </label>
 
-            <button type="submit" class="black-button">войти</button>
-        </form>
+                <button type="submit" class="black-button">войти</button>
+            </form>
 
+        </div>
     </div>
 </div>
 
