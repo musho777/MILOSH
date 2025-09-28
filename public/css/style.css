@@ -352,21 +352,27 @@ main,
 }
 
 /* Responsive grid adjustments */
+@media (max-width: 1600px) {
+    .grid-section {
+        grid-template-columns: 1.5fr 360px 1.5fr;
+    }
+}
+
 @media (max-width: 1400px) {
     .grid-section {
-        grid-template-columns: 1.5fr 500px 1.5fr;
+        grid-template-columns: 1.5fr 360px 1.5fr;
     }
 }
 
 @media (max-width: 1200px) {
     .grid-section {
-        grid-template-columns: 1.5fr 450px 1.5fr;
+        grid-template-columns: 1.5fr 360px 1.5fr;
     }
 }
 
 @media (max-width: 1024px) {
     .grid-section {
-        grid-template-columns: 1.5fr 400px 1.5fr;
+        grid-template-columns: 1.5fr 360px 1.5fr;
     }
 }
 
@@ -413,24 +419,31 @@ main,
 }
 
 /* Responsive adjustments for tall grid item */
+@media (max-width: 1600px) {
+    .grid-item.tall {
+        min-width: 360px;
+        width: 360px;
+    }
+}
+
 @media (max-width: 1400px) {
     .grid-item.tall {
-        min-width: 500px;
-        width: 500px;
+        min-width: 360px;
+        width: 360px;
     }
 }
 
 @media (max-width: 1200px) {
     .grid-item.tall {
-        min-width: 450px;
-        width: 450px;
+        min-width: 360px;
+        width: 360px;
     }
 }
 
 @media (max-width: 1024px) {
     .grid-item.tall {
-        min-width: 400px;
-        width: 400px;
+        min-width: 360px;
+        width: 360px;
     }
 }
 
