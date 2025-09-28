@@ -56,10 +56,10 @@
         <a class="search-button" href="{{route('showCatalogPage')}}">перейти в каталог</a>
     </div>
 </div>
-<div class = "back-button" onclick="history.back()" style="cursor: pointer;">
-    <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
-</div>
 <div class="shop-container">
+    <div class = "back-button" onclick="history.back()" style="cursor: pointer;">
+        <img src="{{ asset('assets/images/Group 85.svg') }}" alt="Back">
+    </div>
     <div class="product-sidebar" id="productSidebar">
         <div class="sidebar-content">
             <span class="close-sidebar" id="closeSidebar">&times;</span>
@@ -220,8 +220,10 @@
         display: flex;
         flex-direction: column;
     }
-
-    ..product-row{
+    .shop-container{
+        position: relative;
+    }
+    .product-row{
         width: 100% !important;
     }
     .chat-header, .chat-footer {
@@ -396,7 +398,7 @@
         position: absolute;
         width: 61px;
         height: 61px;
-        top:100px;
+        top:40px;
         left: 40px;
     }
     .back-button img{
