@@ -342,7 +342,7 @@ main,
 
 .grid-section {
     display: grid;
-    grid-template-columns: 1.5fr 500px 1.5fr; /* Fixed middle column width */
+    grid-template-columns: 1.5fr 490px 1.5fr; /* Fixed middle column width - 10px for border */
     grid-template-rows: repeat(2, 767px);
     width: 100%;
     margin: 0 auto;
@@ -354,25 +354,25 @@ main,
 /* Responsive grid adjustments */
 @media (max-width: 1600px) {
     .grid-section {
-        grid-template-columns: 1.5fr 360px 1.5fr;
+        grid-template-columns: 1.5fr 350px 1.5fr;
     }
 }
 
 @media (max-width: 1400px) {
     .grid-section {
-        grid-template-columns: 1.5fr 360px 1.5fr;
+        grid-template-columns: 1.5fr 350px 1.5fr;
     }
 }
 
 @media (max-width: 1200px) {
     .grid-section {
-        grid-template-columns: 1.5fr 360px 1.5fr;
+        grid-template-columns: 1.5fr 350px 1.5fr;
     }
 }
 
 @media (max-width: 1024px) {
     .grid-section {
-        grid-template-columns: 1.5fr 360px 1.5fr;
+        grid-template-columns: 1.5fr 350px 1.5fr;
     }
 }
 
@@ -407,8 +407,8 @@ main,
     display: flex;
     padding: 0;
     overflow: hidden;
-    min-width: 500px; /* Fixed minimum width to maintain image aspect ratio */
-    width: 500px; /* Fixed width for consistent display */
+    min-width: 490px; /* Fixed minimum width minus 10px for border */
+    width: 490px; /* Fixed width minus 10px for border */
 }
 
 /* Background image fix for grid items */
@@ -421,29 +421,29 @@ main,
 /* Responsive adjustments for tall grid item */
 @media (max-width: 1600px) {
     .grid-item.tall {
-        min-width: 360px;
-        width: 360px;
+        min-width: 350px;
+        width: 350px;
     }
 }
 
 @media (max-width: 1400px) {
     .grid-item.tall {
-        min-width: 360px;
-        width: 360px;
+        min-width: 350px;
+        width: 350px;
     }
 }
 
 @media (max-width: 1200px) {
     .grid-item.tall {
-        min-width: 360px;
-        width: 360px;
+        min-width: 350px;
+        width: 350px;
     }
 }
 
 @media (max-width: 1024px) {
     .grid-item.tall {
-        min-width: 360px;
-        width: 360px;
+        min-width: 350px;
+        width: 350px;
     }
 }
 
